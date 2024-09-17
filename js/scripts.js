@@ -81,6 +81,45 @@ $(document).ready(function() {
         });
     }
 
+    if( $(".rev_slider").length > 0 ) {
+        $(".rev_slider").not(".slick-initialized").slick({
+            dots: true,
+            arrows: true,
+            // autoplay: true,
+            // autoplaySpeed: 4000,
+            speed: 2000,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            variableWidth: true
+        });
+    }
+
+    $(".rate").each(function() {
+        datarate = $(this).attr("data-rate");
+        counter = 0;
+        $(this).find("li").each(function() {
+            counter++;
+            if(counter <= datarate) {
+                $(this).addClass("active");
+            }
+        });
+    });
+
+    // --------------
+
+    $(".dr_title").on("click", function(e) {
+      e.preventDefault();
+      parent = $(this).closest(".dr_parent");
+      sl = parent.find(".dr_content");
+      if(sl.is(":hidden")) {
+        parent.addClass("active");
+        sl.slideDown(300);
+      } else {               
+        sl.slideUp(300);
+        parent.removeClass("active");
+      }
+    });
+
     // --------------
 
     $(".respmenubtn").click(function(e) {
