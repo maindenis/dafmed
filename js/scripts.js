@@ -29,6 +29,60 @@ $(document).ready(function() {
 
     // --------------
 
+    if( $(".ba_slider").length > 0 ) {
+        $(".ba_slider").not(".slick-initialized").slick({
+            dots: true,
+            arrows: false,
+            // autoplay: true,
+            // autoplaySpeed: 4000,
+            speed: 2000,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade: true,
+            draggable: false
+        });
+    }
+
+    if( $(".slider_2").length > 0 ) {
+         $('.slider_2').on('init', function(event, slick){
+            index = slick.currentSlide;
+            slname = $(this).attr("data-slider");
+            $(".ba_slider[data-slider = '"+slname+"'] .slick-dots li:eq("+index+") button").trigger("click");
+        });
+
+        $('.slider_2').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+            slickDots = $(this).find(".slick-dots");
+            index = parseInt(slickDots.find("button[aria-selected='true']").attr("aria-label"));
+            slname = $(this).attr("data-slider");
+            $(".ba_slider[data-slider = '"+slname+"'] .slick-dots li:eq("+nextSlide+") button").trigger("click");
+        });
+        $(".slider_2").not(".slick-initialized").slick({
+            dots: true,
+            arrows: true,
+            // autoplay: true,
+            // autoplaySpeed: 4000,
+            speed: 2000,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade: true,
+        });
+    }
+
+    if( $(".slider_3").length > 0 ) {
+        $(".slider_3").not(".slick-initialized").slick({
+            dots: false,
+            arrows: true,
+            // autoplay: true,
+            // autoplaySpeed: 4000,
+            speed: 2000,
+            slidesToShow: 1,
+            slidesToScroll: 2,
+            variableWidth: true
+        });
+    }
+
+    // --------------
+
     $(".respmenubtn").click(function(e) {
       e.preventDefault();
       if( $("#resp_nav").is(":hidden") ) {
@@ -48,5 +102,9 @@ $(document).ready(function() {
                 $(".respmenubtn").removeClass("active");
         }
     });
+
+    // ------------------
+
+    $('.beforeAfter').beforeAfter();
 
 });
