@@ -94,6 +94,19 @@ $(document).ready(function() {
         });
     }
 
+    if( $(".blog_slider").length > 0 ) {
+        $(".blog_slider").not(".slick-initialized").slick({
+            dots: false,
+            arrows: true,
+            // autoplay: true,
+            // autoplaySpeed: 4000,
+            speed: 2000,
+            slidesToShow: 1,
+            slidesToScroll: 2,
+            variableWidth: true
+        });
+    }
+
     $(".rate").each(function() {
         datarate = $(this).attr("data-rate");
         counter = 0;
