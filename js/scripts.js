@@ -44,11 +44,11 @@ $(document).ready(function() {
     }
 
     if( $(".slider_2").length > 0 ) {
-         $('.slider_2').on('init', function(event, slick){
-            index = slick.currentSlide;
-            slname = $(this).attr("data-slider");
-            $(".ba_slider[data-slider = '"+slname+"'] .slick-dots li:eq("+index+") button").trigger("click");
-        });
+        //  $('.slider_2').on('init', function(event, slick){
+        //     index = slick.currentSlide;
+        //     slname = $(this).attr("data-slider");
+        //     $(".ba_slider[data-slider = '"+slname+"'] .slick-dots li:eq("+index+") button").trigger("click");
+        // });
 
         $('.slider_2').on('beforeChange', function(event, slick, currentSlide, nextSlide){
             slickDots = $(this).find(".slick-dots");
@@ -107,6 +107,19 @@ $(document).ready(function() {
         });
     }
 
+    if( $(".slider_4").length > 0 ) {
+        $(".slider_4").not(".slick-initialized").slick({
+            dots: true,
+            arrows: true,
+            // autoplay: true,
+            // autoplaySpeed: 4000,
+            speed: 2000,
+            slidesToShow: 1,
+            slidesToScroll: 2,
+            fade: true,
+        });
+    }
+
     $(".rate").each(function() {
         datarate = $(this).attr("data-rate");
         counter = 0;
@@ -158,5 +171,26 @@ $(document).ready(function() {
     // ------------------
 
     $('.beforeAfter').beforeAfter();
+
+    // ------------------
+
+    if($("#map").length > 0) {
+        var mapZoom = $("#map").attr("data-zoom");
+        var lat = $("#map").attr("data-lat");
+        var long = $("#map").attr("data-long");
+        ymaps.ready(function () {        
+            var myMap = new ymaps.Map('map', {
+                center: [long, lat],
+                zoom: mapZoom
+            }, {
+                searchControlProvider: 'yandex#search'
+            });
+            myPlacemark1 = new ymaps.Placemark([long, lat], {
+                hintContent: ''
+            }, {
+            });
+            myMap.geoObjects.add(myPlacemark1);        
+        });
+    }
 
 });
