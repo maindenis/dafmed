@@ -1438,7 +1438,12 @@ span.circle_shape:before {
 }
 
 .thumb_3_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 200px;
+    width: 200px;
+    margin: 0 auto;
     position: relative;
     background-image: url(img/circle_thumb.svg);
     background-size: contain;
@@ -1452,10 +1457,30 @@ span.circle_shape:before {
     height: auto;
     max-width: 100%;
     max-height: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: scale(1);
+    -webkit-transition-property: transform;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: transform;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: transform;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: transform;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: transform;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.thumb_3:hover .thumb_3_icon img {
+    transform: scale(1.3);
 }
 
 .btn_wrapp {
@@ -1493,10 +1518,6 @@ span.circle_shape:before {
     text-align: center;
     margin: 18px 0 18px 0;
     padding: 110px 50px 178px 50px;
-}
-
-.contacts_form_title {
-
 }
 
 .contacts_form_title h3 {
@@ -1573,10 +1594,6 @@ span.circle_shape:before {
 
 .form_two_cols .blue_pill {
     width: 100%;
-}
-
-.ch_wrapp {
-
 }
 
 .ch {
@@ -3032,6 +3049,241 @@ span.circle_shape:before {
 }
 
 /*-- /Section 12 - Main Page --*/
+
+/*-- Section 1 - Services --*/
+
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    padding: 63px 0 0 0;
+}
+
+.breadcrumbs li {
+    padding: 5px 14px;
+    position: relative;
+    line-height: 1;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.01em;
+    color: #102348;
+}
+
+.breadcrumbs li:after {
+    display: block;
+    content: "";
+    width: 17px;
+    height: 16px;
+    background-image: url(img/separate.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 7px;
+    right: -7px;
+}
+
+.breadcrumbs li:last-child:after {
+    display: none;
+}
+
+.breadcrumbs li a {
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.01em;
+    color: rgba(16, 35, 72, .5);
+}
+
+.h1_wrapp_2 {
+    text-align: center;
+}
+
+.h1_wrapp_2 h1 {
+    padding: 5px 0;
+}
+
+.thumbs_3_2 {
+    padding: 97px 0 31px 0;
+}
+
+/*-- /Section 1 - Services --*/
+
+/*-- Section 11 - 2 - Main Page --*/
+
+.callback_box_2 {
+    margin-bottom: 3px;
+}
+
+.thumbs_3_2 .thumb_3 .blue_link {
+    opacity: 0;
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: opacity;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: opacity;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: opacity;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: opacity;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.thumbs_3_2 .thumb_3:hover .blue_link {
+    opacity: 1;
+}
+
+/*-- /Section 11 - 2 - Main Page --*/
+
+/*-- Section 1 - Doctors --*/
+
+.title_grey_box {
+    position: relative;
+}
+
+.breadcrumbs_2 {
+    padding: 3px 0 110px 0;
+}
+
+.yellow_shape_6 {
+    background-image: url(img/yellow_shape_6.svg);
+    background-size: contain;
+    background-position: center 20px;
+    background-repeat: no-repeat;
+    font-family: 'Caveat';
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 64px;
+    letter-spacing: -0.01em;
+    color: #102348;
+}
+
+.h1_wrapp_2_descript {
+    max-width: 610px;
+    margin: 0 auto;
+    padding: 104px 0 40px 0;
+    text-align: center;
+}
+
+.h1_wrapp_2_descript p {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.03em;
+    color: #102348;
+}
+
+.photo_box {
+    border: 9px solid #fff;
+}
+
+.photo_box .img_box {
+    height: 271px;
+    overflow: hidden;
+    position: relative;
+}
+
+.photo_box .img_box img {
+    display: block;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.photo_box_1 {
+    width: 231.49px;
+    height: 339.51px;
+    background: #FFF;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .11);
+    border-radius: 6.173px;
+    transform: rotate(-8.09deg);
+    position: absolute;
+    top: 27px;
+    left: 32px;
+}
+
+.photo_box_2 {
+    width: 231.49px;
+    height: 339.51px;
+    background: #FFF;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .11);
+    border-radius: 6.173px;
+    transform: rotate(20.7deg);
+    position: absolute;
+    top: 193px;
+    left: 26px;
+}
+
+.photo_box_3 {
+    width: 231.49px;
+    height: 339.51px;
+    background: #FFF;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .11);
+    border-radius: 6.173px;
+    transform: rotate(20.01deg);
+    position: absolute;
+    top: calc(100% + 32px);
+    left: calc(50% - 20px);
+}
+
+.photo_box_4 {
+    width: 231.49px;
+    height: 339.51px;
+    background: #FFF;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .11);
+    border-radius: 6.173px;
+    transform: rotate(15.23deg);
+    position: absolute;
+    top: 57px;
+    right: 30px;
+}
+
+.photo_box_5 {
+    width: 231.49px;
+    height: 339.51px;
+    background: #FFF;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, .11);
+    border-radius: 6.173px;
+    transform: rotate(-5.03deg);
+    position: absolute;
+    top: 204px;
+    right: -33px;
+}
+
+/*-- /Section 1 - Doctors --*/
+
+/*-- Section 2 - Doctors --*/
+
+.doctors_thumbs {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -2px;
+    padding: 206px 0 30px 0;
+}
+
+.doctor_thumb_2 {
+    width: calc(33.33% - 4px);
+    margin: 2px;
+}
+
+.doctor_thumb_2 .img_box {
+    height: 476px;
+}
+
+/*-- /Section 2 - Doctors --*/
 
 
 /*-------------------------------------------*/
