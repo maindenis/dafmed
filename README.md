@@ -4,3 +4,4 @@
 # https://maindenis.github.io/dafmed/blog.html
 # https://maindenis.github.io/dafmed/single-article.html
 # https://maindenis.github.io/dafmed/404.html
+# https://maindenis.github.io/dafmed/prices.html
