@@ -4260,10 +4260,6 @@ span.circle_shape:before {
     color: #102348;
 }
 
-.prices_table {
-
-}
-
 .prices_table .table_row {
     display: flex;
     border-bottom: 1px solid rgba(16, 35, 72, .1);
@@ -4291,7 +4287,36 @@ span.circle_shape:before {
     color: #102348;
 }
 
+.prices_table .table_row p a {
+    border-bottom: 1px solid #05B4EA;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.03em;
+    color: #05B4EA;
+    -webkit-transition-property: border;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
 
+    -moz-transition-property: border;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: border;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: border;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: border;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.prices_table .table_row p a:hover {
+    border-bottom: 1px solid transparent;
+}
 
 /*-- /Section 2 - Prices --*/
 
