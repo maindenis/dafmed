@@ -1,3 +1,45 @@
+function getSidebarScrollParams() {
+    // if( $(".object_map").length > 0 && bodyWidth > 767) {
+        filtersCoord = $(document).scrollTop();    
+        mapCoord = $("#pricesTempl").offset().top;
+        if(filtersCoord >= mapCoord - 20) {            
+            $(".sidebar_scroll").addClass("fixed");
+            $(".sidebar_scroll").css({
+                "top" : 20 + "px",
+                "width" : $("#sidebarWrapp").width() + "px",
+                "left" : $("#sidebarWrapp").offset().left + "px"
+            });
+            mapScrollBootmCoord = filtersCoord + $(".sidebar_scroll").height();
+            bottomCoord = $("#pricesTempl").offset().top + $("#pricesTempl").height();
+            if( mapScrollBootmCoord >= bottomCoord ) {
+                $(".sidebar_scroll").addClass("bottom_position");
+            } else {
+                $(".sidebar_scroll").removeClass("bottom_position");
+            }
+        } else {
+            $(".sidebar_scroll").removeClass("fixed");
+            $(".sidebar_scroll").css({
+                "top" : 0
+            });
+        }
+    // }
+}
+
+var sections = $('.scrollSect')
+  , nav = $('#sidebar')
+  , nav_height = nav.outerHeight();
+$(window).on('scroll', function () {
+  var cur_pos = $(this).scrollTop();  
+  sections.each(function() {
+    var top = $(this).offset().top - nav_height,
+        bottom = top + $(this).outerHeight();    
+    if (cur_pos >= top && cur_pos <= bottom) {
+      nav.find('a').removeClass('active');
+      nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+    }
+  });
+});
+
 var w = window,
 d = document,
 e = d.documentElement,
@@ -9,10 +51,11 @@ $(window).resize(function() {
 });
 
 $(document).scroll(function() {
-
+    getSidebarScrollParams();
 });
 
 $(document).ready(function() {
+    getSidebarScrollParams();
 
     if( $(".promo_slider").length > 0 ) {
         $(".promo_slider").not(".slick-initialized").slick({
@@ -192,7 +235,20 @@ $(document).ready(function() {
         lenghtBoxes--;
     }while(lenghtBoxes>0);
 
-    
+    // -----------------
+
+    $('a[href^="#"]').on('click', function (e) {
+      e.preventDefault();
+      var hrefAttr = $(this).attr("href");
+      parent = $(this).closest("ul");
+      parent.find("a").removeClass("active");
+      $(this).addClass("active");
+      if( hrefAttr.length > 0 && hrefAttr != "#" ) {
+          $('html, body').stop().animate({
+              'scrollTop': $(hrefAttr).offset().top-100
+          }, 500);
+      }
+    });
 
     // -----------------
 
