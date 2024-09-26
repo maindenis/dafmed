@@ -4416,14 +4416,6 @@ span.circle_shape:before {
     margin-left: 6px;
 }
 
-.service_icon_wrapp {
-
-}
-
-.service_icon_wrapp .thumb_3_icon {
-
-}
-
 /*-- /Section 1 - Service Article --*/
 
 /*-- Section 2 - Service Article --*/
@@ -4635,7 +4627,7 @@ span.circle_shape:before {
     left: calc(50% + 10px);
 }
 
-.service_doctors_slider h3 {
+.service_doctors_slider > h3 {
     padding: 46px 0 3px 25px;
     font-weight: 500;
     font-size: 32px;
@@ -4656,7 +4648,149 @@ span.circle_shape:before {
 
 /*-- /Section 2 - Service Article --*/
 
+/*-- Section 1 - Doctor Page --*/
 
+.sect_1_doctor {
+
+}
+
+.sect_1_doctor .breadcrumbs {
+
+}
+
+.doctor_templ {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.doctor_templ > .left {
+    width: 540px;
+}
+
+.doctor_templ > .right {
+    width: calc(100% - 540px);
+}
+
+.doc_img {
+    width: 100%;
+    max-width: 480px;
+    height: 504px;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.doc_img img {
+    display: block;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.doc_ttile {
+
+}
+
+.doc_ttile h2 {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.01em;
+    color: #102348;
+}
+
+.doc_ttile h3 {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.01em;
+    color: rgba(16, 35, 72, .6);
+}
+
+.doc_ttile p {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.01em;
+    color: #127CE5;
+}
+
+.services_tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -2px;
+}
+
+.services_tags li {
+    padding: 2px;
+}
+
+.services_tags li a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5px 16px;
+    min-height: 48px;
+    background: #FFF;
+    border-radius: 12px;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #102348;
+}
+
+.about_doc {
+
+}
+
+.about_doc h3 {
+
+}
+
+.about_doc p {
+
+}
+
+.doctor_templ .blue_pill {
+
+}
+
+.doc_info_box {
+
+}
+
+.doc_info_box h3 {
+
+}
+
+.doc_info_item {
+
+}
+
+.doc_info_item p {
+
+}
+
+.doc_info_item_row {
+
+}
+
+.doc_info_item_row > div:nth-child(1) {
+
+}
+
+.doc_info_item_row > div:nth-child(2) {
+
+}
+
+.doc_info_item_row p {
+
+}
+
+/*-- /Section 1 - Doctor Page --*/
 
 
 /*-------------------------------------------*/
