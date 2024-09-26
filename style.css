@@ -4168,12 +4168,12 @@ span.circle_shape:before {
 
 .prices_templ > .left {
     width: 42%;
-    padding: 2px 2px 2px 0;
+    padding: 2px 2px 0 0;
 }
 
 .prices_templ > .right {
     width: 58%;
-    padding: 27px 0 2px 2px;
+    padding: 27px 0 0 2px;
 }
 
 .prices_nav_box {
@@ -4262,6 +4262,10 @@ span.circle_shape:before {
     padding-bottom: 0;
 }
 
+.prices_tables:last-child .prices_table_box:last-child {
+    margin: 4px 0 0 0;
+}
+
 .prices_tables_title {
     padding: 10px 22px 10px 22px;
 }
@@ -4348,6 +4352,312 @@ span.circle_shape:before {
 }
 
 /*-- /Section 2 - Prices --*/
+
+/*-- Section 1 - Service Article --*/
+
+.sect_1_prices {
+/*    position: relative;*/
+}
+
+.service_white_box_title {
+    padding-bottom: 23px;
+    position: relative;
+}
+
+.inner_row {
+    position: relative;
+    z-index: 2;
+}
+
+.service_white_box_title .breadcrumbs_2 {
+    padding: 9px 0 44px 0;
+}
+
+.service_shape_1 {
+    position: absolute;
+    bottom: 0;
+    left: 26px;
+}
+
+.service_shape_2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.yellow_shape_9 {
+    padding: 0 14px 0 3px;
+    font-family: 'Caveat';
+    font-size: 72px;
+    line-height: 100%;
+    letter-spacing: -0.01em;
+    color: #102348;
+    background-position: center 79%;
+    background-image: url(img/yellow_shape_9.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.btn_wrapp_4 {
+    padding: 36px 0 43px 0;
+    text-align: center;
+}
+
+.transparent_pill_2 {
+    min-width: 200px;
+    min-height: 48px;
+    border: 1px solid #102348;
+    border-radius: 18px;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.transparent_pill_2 svg {
+    margin-left: 6px;
+}
+
+.service_icon_wrapp {
+
+}
+
+.service_icon_wrapp .thumb_3_icon {
+
+}
+
+/*-- /Section 1 - Service Article --*/
+
+/*-- Section 2 - Service Article --*/
+
+.sect_2_service {
+    padding: 1px 0 48px 0;
+}
+
+.service_templ_header {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.service_templ_header > div:nth-child(1) {
+    width: 474px;
+    padding: 2px 2px 2px 0;
+}
+
+.service_templ_header > div:nth-child(2) {
+    width: calc(100% - 474px);
+    padding: 2px 0 2px 2px;
+}
+
+.service_templ_content {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.service_templ_content > .left {
+    width: 474px;
+    padding: 2px 2px 0 0;
+}
+
+.service_templ_content > .right {
+    width: calc(100% - 474px);
+    padding: 2px 0 0 2px;
+}
+
+.service_article {
+    padding: 19px 24px 46px 24px;
+    background: #FFF;
+    border-radius: 18px;
+}
+
+.service_article_item {
+    padding: 39px 0 6px 0;
+    border-bottom: 1px solid rgba(16, 35, 72, 0.1);
+}
+
+.service_article_item:nth-child(1) {
+    padding-top: 0;
+}
+
+.service_article_item:last-child {
+    border-bottom: none;
+}
+
+.service_article_item h3 {
+    padding: 5px 0 10px 0;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.03em;
+    color: #102348;
+}
+
+.service_article_item p {
+    padding: 3px 0;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.03em;
+    color: #102348;
+}
+
+.service_article_item ol {
+    padding: 2px 0 4px 0;
+}
+
+.service_article_item ol li {
+    padding-left: 25px;
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.03em;
+    color: #102348;
+}
+
+.service_article_item ol li:before {
+    display: block;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: #102348;
+    position: absolute;
+    top: 10px;
+    left: 7px;
+    border-radius: 50%;
+}
+
+.service_article_item ul {
+    padding: 2px 0 4px 0;
+}
+
+.service_article_item ul li {
+    padding-left: 25px;
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.03em;
+    color: #102348;
+}
+
+.service_article_item ul li:before {
+    display: block;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: #102348;
+    position: absolute;
+    top: 10px;
+    left: 7px;
+    border-radius: 50%;
+}
+
+.service_article_item img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    border-radius: 16px;
+    margin: 10px 0 10px 0;
+}
+
+.service_prices h3 {
+    padding: 54px 0 8px 25px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.03em;
+    color: #102348;
+}
+
+.service_prices_table_box {
+    padding: 5px 24px 10px 24px;
+}
+
+.service_jobs {
+    margin-bottom: 90px;
+}
+
+.service_jobs h3 {
+    padding: 50px 0 8px 25px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.03em;
+    color: #102348;
+}
+
+.jobs_slider_wrapp {
+    margin: 0;
+    padding: 20px 24px 20px 24px;
+    background: #FFF;
+    border-radius: 18px;
+}
+
+.jobs_slider {
+    margin: 0 -2px;
+}
+
+.job_slide {
+    width: 452px;
+    padding: 2px;
+}
+
+.beforeAfter_2_wrapp {
+    height: 380px;
+    border-radius: 16px;
+}
+
+.beforeAfter_2 {
+    height: 380px;
+}
+
+.jobs_slider .slick-prev {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background-image: url(img/left_blue_arrow_tr.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1 !important;
+    position: absolute;
+    bottom: -101px;
+    left: calc(50% - 60px);
+}
+
+.jobs_slider .slick-next {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background-image: url(img/right_blue_arrow_tr.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1 !important;
+    position: absolute;
+    bottom: -101px;
+    left: calc(50% + 10px);
+}
+
+.service_doctors_slider h3 {
+    padding: 46px 0 3px 25px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.03em;
+    color: #102348;
+}
+
+.service_doctors_slider .slider_3 .slick-prev {
+    bottom: 13px;
+    left: calc(50% - 60px);
+}
+
+.service_doctors_slider .slider_3 .slick-next {
+    bottom: 13px;
+    left: calc(50% + 11px);
+}
+
+/*-- /Section 2 - Service Article --*/
+
+
+
 
 /*-------------------------------------------*/
 /* ----- FOOTER ------ */

@@ -1,5 +1,5 @@
 function getSidebarScrollParams() {
-    // if( $(".object_map").length > 0 && bodyWidth > 767) {
+    if( $(".sidebar_scroll").length > 0 && bodyWidth > 767) {
         filtersCoord = $(document).scrollTop();    
         mapCoord = $("#pricesTempl").offset().top;
         if(filtersCoord >= mapCoord - 20) {            
@@ -22,23 +22,23 @@ function getSidebarScrollParams() {
                 "top" : 0
             });
         }
-    // }
+    }
 }
 
-var sections = $('.scrollSect')
-  , nav = $('#sidebar')
-  , nav_height = nav.outerHeight();
-$(window).on('scroll', function () {
-  var cur_pos = $(this).scrollTop();  
+function  getNavItemParams() {
+    var sections = $('.scrollSect')
+  , nav = $('#sideNav')
+  , nav_height = $('#sideNav a').outerHeight();
+  var cur_pos = $(window).scrollTop();  
   sections.each(function() {
     var top = $(this).offset().top - nav_height,
-        bottom = top + $(this).outerHeight();    
+        bottom = top + $(this).outerHeight();
     if (cur_pos >= top && cur_pos <= bottom) {
-      nav.find('a').removeClass('active');
-      nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
-    }
+        nav.find('a').removeClass('active');
+        nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+    }    
   });
-});
+}
 
 var w = window,
 d = document,
@@ -47,15 +47,17 @@ g = d.getElementsByTagName('body')[0],
 bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
 
 $(window).resize(function() {
-
+bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
 });
 
 $(document).scroll(function() {
     getSidebarScrollParams();
+    getNavItemParams();
 });
 
 $(document).ready(function() {
     getSidebarScrollParams();
+    getNavItemParams();
 
     if( $(".promo_slider").length > 0 ) {
         $(".promo_slider").not(".slick-initialized").slick({
@@ -163,6 +165,24 @@ $(document).ready(function() {
         });
     }
 
+    // -------------
+
+    if( $(".jobs_slider").length > 0 ) {
+        $(".jobs_slider").not(".slick-initialized").slick({
+            dots: false,
+            arrows: true,
+            // autoplay: true,
+            // autoplaySpeed: 4000,
+            speed: 2000,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            variableWidth: true,
+            draggable: false
+        });
+    }
+
+    // -------------
+
     $(".rate").each(function() {
         datarate = $(this).attr("data-rate");
         counter = 0;
@@ -230,7 +250,6 @@ $(document).ready(function() {
     counter = 0;
     do{
         $(".bg_block").eq(counter).attr("data-position", lenghtBoxes);
-        console.log(lenghtBoxes);
         counter++;
         lenghtBoxes--;
     }while(lenghtBoxes>0);
