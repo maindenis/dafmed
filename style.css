@@ -4658,9 +4658,16 @@ span.circle_shape:before {
 
 }
 
+.doc_sect {
+    max-width: 1074px;
+    margin: 0 auto;
+    padding: 20px 0 0 0;
+}
+
 .doctor_templ {
     display: flex;
     flex-wrap: wrap;
+    padding: 20px 0 47px 0;
 }
 
 .doctor_templ > .left {
@@ -4692,11 +4699,8 @@ span.circle_shape:before {
     transform: translate(-50%, -50%);
 }
 
-.doc_ttile {
-
-}
-
 .doc_ttile h2 {
+    padding: 10px 0;
     font-size: 40px;
     line-height: 48px;
     letter-spacing: -0.01em;
@@ -4704,6 +4708,7 @@ span.circle_shape:before {
 }
 
 .doc_ttile h3 {
+    padding: 5px 0;
     font-size: 24px;
     line-height: 32px;
     letter-spacing: -0.01em;
@@ -4711,6 +4716,7 @@ span.circle_shape:before {
 }
 
 .doc_ttile p {
+    padding: 5px 0;
     font-size: 24px;
     line-height: 32px;
     letter-spacing: -0.01em;
@@ -4721,6 +4727,7 @@ span.circle_shape:before {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -2px;
+    padding: 7px 0 0 0;
 }
 
 .services_tags li {
@@ -4740,57 +4747,191 @@ span.circle_shape:before {
     line-height: 24px;
     letter-spacing: -0.01em;
     color: #102348;
+    -webkit-transition-property: color, background;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: color, background;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: color, background;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: color, background;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: color, background;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.services_tags li a:hover {
+    background: #102348;
+    color: #fff;
 }
 
 .about_doc {
-
+    margin: 36px 0 14px 0;
+    padding: 24px;
+    background: #FFF;
+    border-radius: 18px;
 }
 
 .about_doc h3 {
-
+    padding-bottom: 43px;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.03em;
+    color: #102348;
 }
 
 .about_doc p {
-
-}
-
-.doctor_templ .blue_pill {
-
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.03em;
+    color: #102348;
 }
 
 .doc_info_box {
-
+    margin: 16px 0;
+    padding: 24px 24px 10px 24px;
+    background: #FFF;
+    border-radius: 18px; 
 }
 
 .doc_info_box h3 {
-
+    padding: 0 0 30px 0;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.03em;
+    color: #102348;
 }
 
-.doc_info_item {
+.doc_info_item {    
+    padding: 15px 0 15px 0;
+    border-bottom: 1px solid rgba(16, 35, 72, .1);
+}
 
+.doc_info_item:last-child {
+    border-bottom: none;
 }
 
 .doc_info_item p {
-
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.03em;
+    color: #102348;
 }
 
 .doc_info_item_row {
+    display: flex;
+    padding: 15px 0 15px 0;
+    border-bottom: 1px solid rgba(16, 35, 72, .1);
+}
 
+.doc_info_item_row:last-child {
+    border-bottom: none;
 }
 
 .doc_info_item_row > div:nth-child(1) {
-
+    width: calc(100% - 60px);
+    padding-right: 10px;
 }
 
 .doc_info_item_row > div:nth-child(2) {
-
+    width: 60px;
+    text-align: right;
 }
 
 .doc_info_item_row p {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.03em;
+    color: #102348;
+}
 
+.rev_box_2 {
+    padding-top: 22px;
+    border-radius: 18px;
+    margin: 0 0 16px 0;
+}
+
+.rev_header {
+    padding-bottom: 31px;
+}
+
+.rev_header h3 {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.03em;
+    color: #102348;
+}
+
+.jobs_slider_2 {
+    margin: 0 -2px;
+}
+
+.job_slide {
+    width: 452px;
+    padding: 2px;
+}
+
+.beforeAfter_2_wrapp {
+    height: 380px;
+    border-radius: 16px;
+}
+
+.beforeAfter_2 {
+    height: 380px;
+}
+
+.jobs_slider_2 .slick-prev {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background-image: url(img/left_blue_arrow_tr.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1 !important;
+}
+
+.jobs_slider_2 .slick-next {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background-image: url(img/right_blue_arrow_tr.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1 !important;
+}
+
+.jobs_slider_2 .slick-prev {
+    position: absolute;
+    bottom: -121px;
+    right: 84px;
+    z-index: 3;
+}
+
+.jobs_slider_2 .slick-next {
+    position: absolute;
+    bottom: -121px;
+    right: 11px;
+    z-index: 3;
+}
+
+.jobs_slider_2 .slick-dots {
+    position: absolute;
+    bottom: -111px;
+    left: 10px;
 }
 
 /*-- /Section 1 - Doctor Page --*/
+
 
 
 /*-------------------------------------------*/

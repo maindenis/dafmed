@@ -181,6 +181,22 @@ $(document).ready(function() {
         });
     }
 
+    // ------------
+
+    if( $(".jobs_slider_2").length > 0 ) {
+        $(".jobs_slider_2").not(".slick-initialized").slick({
+            dots: true,
+            arrows: true,
+            // autoplay: true,
+            // autoplaySpeed: 4000,
+            speed: 2000,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            variableWidth: true,
+            draggable: false
+        });
+    }
+
     // -------------
 
     $(".rate").each(function() {

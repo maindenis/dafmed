@@ -6,3 +6,4 @@
 # https://maindenis.github.io/dafmed/404.html
 # https://maindenis.github.io/dafmed/prices.html
 # https://maindenis.github.io/dafmed/single-service.html
+# https://maindenis.github.io/dafmed/single-doctor.html
