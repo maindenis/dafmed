@@ -197,6 +197,19 @@ $(document).ready(function() {
         });
     }
 
+    if( $(".yand_revs_slider").length > 0 ) {
+        $(".yand_revs_slider").not(".slick-initialized").slick({
+            dots: false,
+            arrows: true,
+            // autoplay: true,
+            // autoplaySpeed: 4000,
+            speed: 2000,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            variableWidth: true,
+        });
+    }
+
     // -------------
 
     $(".rate").each(function() {
