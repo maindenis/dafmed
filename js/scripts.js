@@ -300,6 +300,111 @@ $(document).ready(function() {
 
     // -----------------
 
+   $(document).on("click", "[data-popup-link]",  function(e) {
+      e.preventDefault();
+      popupName = $(this).attr("data-popup-link");
+      div = document.createElement('div');
+      div.style.overflowY = 'scroll';
+      div.style.width = '50px';
+      div.style.height = '50px';
+      div.style.visibility = 'hidden';
+      document.body.appendChild(div);
+      scrollWidth = div.offsetWidth - div.clientWidth;
+      document.body.removeChild(div);
+      topCoord = $(document).scrollTop();
+      $("body").addClass("fixed");
+      $("body").css({
+          "top" :  -1 * topCoord + "px",
+          "padding-right" : scrollWidth + "px"
+      });
+      $(".popup_bg").fadeIn(300);
+      $("[data-popup = '"+ popupName +"']").fadeIn(300);
+    });
+    $(document).on("click", ".close, .popup_bg", function(e) {
+      e.preventDefault();
+      curTop = $("body").css("top");
+      curTop = Math.abs(parseInt(curTop, 10));
+      $("body").removeClass("fixed");
+      if (curTop !== 0) {
+          $("html").scrollTop(curTop);
+      }
+      $("body").attr("style", "");
+      $("[data-popup]").fadeOut(300);
+      $(".popup_bg").fadeOut(300);
+    });
+    $(this).keydown(function(eventObject){
+      if (eventObject.which == 27 && $("body").hasClass("fixed")) {
+        curTop = $("body").css("top");
+        curTop = Math.abs(parseInt(curTop, 10));
+        $("body").removeClass("fixed");
+        if (curTop !== 0) {
+            $("html").scrollTop(curTop);
+        }
+        $("body").attr("style", "");      
+        $(".popup_bg").fadeOut(300);
+        $("[data-popup]").fadeOut(300);
+      }
+    });
+    $(document).on("mouseup", function(e) {
+      if($(".popup").is(":visible")) {
+        e.preventDefault();
+        hide_element = $(".popup_content");
+        if (!hide_element.is(e.target)
+            && hide_element.has(e.target).length === 0) {
+            curTop = $("body").css("top");
+            curTop = Math.abs(parseInt(curTop, 10));
+            $("body").removeClass("fixed");
+            if (curTop !== 0) {
+                $("html").scrollTop(curTop);
+            }
+            $("body").attr("style", "");    
+            $(".popup_bg").fadeOut(300);
+            $("[data-popup]").fadeOut(300);
+        }
+      }
+    });
+
+    // -----------------
+
+    $(document).on("click", ".checkout_list [data-option-val]",  function(e) {
+      e.preventDefault();
+      parent = $(this).closest(".custom_select");
+      val = $(this).html();
+      text = $(this).attr("data-option-val");
+      parent.find(".p_val").html(val);
+      parent.find("input[type='hidden']").val(text);
+      parent.removeClass("active");
+      parent.find("[data-option-val]").removeClass("active");
+      $(this).addClass("active");
+    });
+
+    $(document).on("click", ".custom_select .custom_select_title", function(e) {
+      e.preventDefault();
+      parent = $(this).closest(".custom_select");
+      if(parent.hasClass("active")) {
+        parent.removeClass("active");
+      } else {
+        $(".custom_select").removeClass("active");
+        parent.addClass("active");
+      }
+    });
+
+    $(document).mouseup(function(e) {
+      hide_element = $(".custom_select");
+      if (!hide_element.is(e.target)
+          && hide_element.has(e.target).length === 0) {
+          hide_element.removeClass("active");
+        }
+    });
+
+    $(this).keydown(function(eventObject){
+      if (eventObject.which == 27) {
+        $(".custom_select").removeClass("active");
+      }
+    });
+
+    // -----------------
+
     // if($("#map").length > 0) {
     //     var mapZoom = $("#map").attr("data-zoom");
     //     var lat = $("#map").attr("data-lat");
