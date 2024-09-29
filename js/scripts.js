@@ -405,6 +405,12 @@ $(document).ready(function() {
 
     // -----------------
 
+    if($("[type='tel']").length > 0) {
+        $("[type='tel']").inputmask({"mask": "+7 (999) 999-99-99"});
+    }
+
+    // -----------------
+
     // if($("#map").length > 0) {
     //     var mapZoom = $("#map").attr("data-zoom");
     //     var lat = $("#map").attr("data-lat");

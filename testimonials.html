@@ -710,7 +710,7 @@
 						<p>Ваше имя</p>
 						<input type="tex" placeholder="Виталий" />
 					</div>
-					<div class="input_wrapp error">
+					<div class="input_wrapp">
 						<p>Номер телефона</p>
 						<input type="tel" placeholder="+7" />
 					</div>
@@ -814,6 +814,22 @@
 			</div>
 		</div>
 	</div>
+	<div class="popup" data-popup = "suc_rev">
+		<div class="popup_content popup_content_2">
+			<button type="button" class="close">
+				<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M8 8.00146L23.9993 24.0008M8 24.0008L23.9993 8.00147" stroke="#102348" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</button>
+			<div class="popup_title">
+				<h3>Спасибо за ваш отзыв </h3>
+			</div>
+			<div class="suc_rev_content">
+				<img src="img/suc_rev.svg" loading="lazy" alt="" />
+				<a href="#" class="transparent_pill">Вернуться на главную</a>
+			</div>
+		</div>
+	</div>
 	<div class="popup_bg"></div>
 	<!-- /Popup -->
 	<link rel="stylesheet" type="text/css" href="responsive.css">
@@ -822,6 +838,7 @@
 	<script src="vendors/js/beforeafter.min.js"></script>
 	<script src="slick/slick.min.js"></script>
 	<!-- <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"></script> -->
+	<script src="vendors/js/inputmask.js"></script>
 	<script src="js/scripts.js"></script>
 </body>
 </html>
