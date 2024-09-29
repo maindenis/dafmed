@@ -5461,6 +5461,173 @@ span.circle_shape:before {
 
 /*-- /Section 3 - Testimonials Page --*/
 
+/*-- Section 1 - Contacts Page --*/
+
+.contacts_two_cols {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 91px;
+}
+
+.contacts_two_cols > div:nth-child(1) {
+    width: 33.33%;
+    padding: 2px 2px 2px 0;
+}
+
+.contacts_two_cols > div:nth-child(2) {
+    width: 66.66%;
+    padding: 2px 0 2px 2px;
+}
+
+.contacts_thumb_3 {
+    padding: 40px;
+    background: #FFF;
+    border-radius: 48px;
+}
+
+.contacts_thumb_3_title h3 {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.01em;
+    color: #102348;
+}
+
+.contact_thumb_3 {
+    display: flex;
+    padding: 31px 0 31px 0;
+    border-bottom: 1px solid rgba(16, 35, 72, .1);
+}
+
+.contact_thumb_3:last-child {
+    padding: 29px 0 0 0;
+    border-bottom: none;
+}
+
+.contact_thumb_3 > div:nth-child(1) {
+    width: 118px;
+}
+
+.contact_thumb_3 > div:nth-child(2) {
+    width: calc(100% - 118px);
+}
+
+.contact_thumb_3 h3 {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.01em;
+    color: rgba(16, 35, 72, .6);
+}
+
+.tel_links_2 li {
+    padding-bottom: 13px;
+}
+
+.tel_links_2 li:last-child {
+    padding-bottom: 0;
+}
+
+.tel_links_2 li a {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.01em;
+    color: #102348;
+}
+
+.contact_thumb_3 p {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.01em;
+    color: #102348;
+}
+
+.contact_thumb_3 p a {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.01em;
+    color: #102348;
+}
+
+.map_2_wrapp {
+    position: relative;
+    border-radius: 48px;
+    overflow: hidden;
+    background: #FFF;
+    border: 3px solid #FFF;
+    border-radius: 48px;
+}
+
+.map_2 {
+    height: 564px !important;
+}
+
+.map_2_wrapp .blue_pill {
+    min-width: 274px;
+    position: absolute;
+    bottom: 37px;
+    left: 37px;
+}
+
+.contacts_thumbs_4 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -2px;
+    padding-bottom: 9px;
+}
+
+.contact_thumb_4 {
+    width: calc(33.33% - 4px);
+    margin: 2px;
+    padding: 40px;
+    background: #FFF;
+    border-radius: 48px;
+}
+
+.contact_thumb_4_title {
+    padding-bottom: 23px;
+}
+
+.contact_thumb_4_title h3 {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.01em;
+    color: #102348;
+}
+
+.contact_link {
+    display: flex;
+    margin: 8px 0;
+    min-height: 72px;
+    padding: 18px 22px 13px 22px;
+    background-color: #FBFBFB;
+    border: 1px solid rgba(16, 35, 72, .2);
+    border-radius: 24px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 22px) center;
+    background-image: url(img/link_arrow.svg);
+}
+
+.contact_link > div:nth-child(1) {
+    width: 40px;
+    padding-top: 2px;
+}
+
+.contact_link > div:nth-child(2) {
+    width: calc(100% - 40px);
+    padding-top: 3px;
+}
+
+.contact_link > div:nth-child(2) p {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.01em;
+    color: #102348;
+}
+
+/*-- /Section 1 - Contacts Page --*/
+
+
+
+
 
 /*-------------------------------------------*/
 /* ----- FOOTER ------ */
