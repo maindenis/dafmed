@@ -4363,10 +4363,6 @@ span.circle_shape:before {
 
 /*-- Section 1 - Service Article --*/
 
-.sect_1_prices {
-/*    position: relative;*/
-}
-
 .service_white_box_title {
     padding-bottom: 23px;
     position: relative;
@@ -6138,6 +6134,24 @@ body.fixed {
 
 .input_wrapp.error + .error_text {
     display: block;
+}
+
+.popup_content_2 {
+    padding: 55px 20px 56px 20px;
+}
+
+.suc_rev_content {
+    width: 457px;
+    margin: 0 auto;
+    padding: 58px 0 0 0;
+}
+
+.suc_rev_content img {
+    margin: 0 0 106px 5%;
+}
+
+.suc_rev_content .transparent_pill {
+    width: 100%;
 }
 
 /*-- /Popups --*/
