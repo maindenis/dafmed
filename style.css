@@ -1146,6 +1146,17 @@ textarea:focus {
     transform: translate(-50%);
 }
 
+.bg_blocks_append {
+    height: 0;
+    width: 0;
+    padding: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: -9999999px;
+    z-index: -1;
+}
+
 /*-- /Section 2 - Main Page --*/
 
 /*-- Section 3 - Main Page --*/
