@@ -69,6 +69,16 @@ $(document).ready(function() {
             slidesToShow: 1,
             slidesToScroll: 1,
             fade: true,
+            responsive: [
+                {
+                  breakpoint: 600,
+                  settings: {
+                    arrows: false,
+                    dots: true,
+                    appendDots: $(".promo_dots")
+                  }                  
+                }
+              ]
         });
     }
 
@@ -240,23 +250,52 @@ $(document).ready(function() {
 
     // --------------
 
-    $(".respmenubtn").click(function(e) {
+    $(".respBtn").click(function(e) {
       e.preventDefault();
-      if( $("#resp_nav").is(":hidden") ) {
-          $("#resp_nav").fadeIn(300);
+      if( $("#respNav").is(":hidden") ) {
+          $("#respNav").fadeIn(300);
+          $(".res_bg").fadeIn(300);
           $(this).addClass("active");
+          $(".closeNav").addClass("active");
       } else {
-          $("#resp_nav").fadeOut(300);
+          $("#respNav").fadeOut(300);
+          $(".res_bg").fadeOut(300);
           $(this).removeClass("active");
+          $(".closeNav").removeClass("active");
       }
     });
     
     $(this).keydown(function(eventObject){
         if (eventObject.which == 27 &&
-            $("#resp_nav").is(":visible") &&
-            bodyWidth <= 767) {
-                $("#resp_nav").fadeOut(300);
-                $(".respmenubtn").removeClass("active");
+            $("#respNav").is(":visible") &&
+            bodyWidth <= 900) {
+                $("#respNav").fadeOut(300);
+                $(".respBtn").removeClass("active");
+                $(".closeNav").removeClass("active");
+                $(".res_bg").fadeOut(300);
+        }
+    });
+
+    $(".res_bg, .closeNav").click(function(e) {
+        e.preventDefault();
+        $("#respNav").fadeOut(300);
+        $(".respBtn").removeClass("active");
+        $(".closeNav").removeClass("active");
+        $(".res_bg").fadeOut(300);
+    });
+
+    $(".menu_arrow").click(function(e) {
+        if(bodyWidth <= 900) {
+            e.preventDefault();
+            parent = $(this).closest("li");
+            subMenu = parent.children(".sub_menu");
+            if(subMenu.is(":hidden")) {
+                subMenu.slideDown(300);
+                $(this).addClass("active");
+            } else {
+                subMenu.slideUp(300);
+                $(this).removeClass("active");
+            }
         }
     });
 
@@ -265,24 +304,36 @@ $(document).ready(function() {
     $('.beforeAfter').beforeAfter();
 
     // ------------------
-
-    $(".info_box .bg_block").each(function () {
-        counter = 0;        
-        $(this).each(function() {
-            counter++;   
-            $(this).css({
-                "z-index" : counter
-            });
+    clickCounter = 0;
+    $(".bg_blocks_append .bg_block").each(function() {
+        $(".bg_blocks_append .bg_block:eq("+clickCounter+")").clone().prependTo(".info_box");
+        $(".info_box .bg_block").css({
+            "display" : "block"
         });
+        clickCounter++;
     });
-    lenghtBoxes = $(".bg_block").length;
-    counter = 0;
-    do{
-        $(".bg_block").eq(counter).attr("data-position", lenghtBoxes);
-        counter++;
-        lenghtBoxes--;
-    }while(lenghtBoxes>0);
-
+    clickCounter = 0;
+    $(".info_box").on("click", function(e) {
+        e.preventDefault();
+        countBgBlocks = parseInt($(".bg_blocks_append").attr("data-countblocks"));
+        if(clickCounter >= countBgBlocks) {
+            clickCounter = 0;
+        }        
+        countBgBlocksActive = $(".info_box .bg_block").length;
+        if(countBgBlocksActive >= countBgBlocks) {
+            $(".info_box .bg_block").remove();
+        }
+        if($(".info_box .bg_block").length == 0) {
+            $(".bg_blocks_append .bg_block:eq("+clickCounter+")").clone().prependTo(".info_box");
+            $(".info_box .bg_block").addClass("first");
+            $(".info_box .bg_block").fadeIn(300);
+        } else {
+            $(".info_box .bg_block:eq("+clickCounter+")").removeClass("first");
+            $(".bg_blocks_append .bg_block:eq("+clickCounter+")").clone().prependTo(".info_box");
+            $(".info_box .bg_block").fadeIn(300);
+        }
+        clickCounter++;
+    });
     // -----------------
 
     $('a[href^="#"]').on('click', function (e) {
@@ -411,23 +462,23 @@ $(document).ready(function() {
 
     // -----------------
 
-    if($("#map").length > 0) {
-        var mapZoom = $("#map").attr("data-zoom");
-        var lat = $("#map").attr("data-lat");
-        var long = $("#map").attr("data-long");
-        ymaps.ready(function () {        
-            var myMap = new ymaps.Map('map', {
-                center: [long, lat],
-                zoom: mapZoom
-            }, {
-                searchControlProvider: 'yandex#search'
-            });
-            myPlacemark1 = new ymaps.Placemark([long, lat], {
-                hintContent: ''
-            }, {
-            });
-            myMap.geoObjects.add(myPlacemark1);        
-        });
-    }
+    // if($("#map").length > 0) {
+    //     var mapZoom = $("#map").attr("data-zoom");
+    //     var lat = $("#map").attr("data-lat");
+    //     var long = $("#map").attr("data-long");
+    //     ymaps.ready(function () {        
+    //         var myMap = new ymaps.Map('map', {
+    //             center: [long, lat],
+    //             zoom: mapZoom
+    //         }, {
+    //             searchControlProvider: 'yandex#search'
+    //         });
+    //         myPlacemark1 = new ymaps.Placemark([long, lat], {
+    //             hintContent: ''
+    //         }, {
+    //         });
+    //         myMap.geoObjects.add(myPlacemark1);        
+    //     });
+    // }
 
 });
