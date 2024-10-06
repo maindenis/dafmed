@@ -132,7 +132,15 @@ $(document).ready(function() {
             speed: 2000,
             slidesToShow: 1,
             slidesToScroll: 2,
-            variableWidth: true
+            variableWidth: true,
+            responsive: [
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToScroll: 1,
+                  }                  
+                }
+              ]
         });
     }
 
@@ -140,6 +148,19 @@ $(document).ready(function() {
         $(".rev_slider").not(".slick-initialized").slick({
             dots: true,
             arrows: true,
+            // autoplay: true,
+            // autoplaySpeed: 4000,
+            speed: 2000,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            variableWidth: true
+        });
+    }
+
+    if( $(".rev_sites_thumbs").length > 0 ) {
+        $(".rev_sites_thumbs").not(".slick-initialized").slick({
+            dots: false,
+            arrows: false,
             // autoplay: true,
             // autoplaySpeed: 4000,
             speed: 2000,
@@ -321,16 +342,29 @@ $(document).ready(function() {
         }        
         countBgBlocksActive = $(".info_box .bg_block").length;
         if(countBgBlocksActive >= countBgBlocks) {
-            $(".info_box .bg_block").remove();
-        }
-        if($(".info_box .bg_block").length == 0) {
-            $(".bg_blocks_append .bg_block:eq("+clickCounter+")").clone().prependTo(".info_box");
-            $(".info_box .bg_block").addClass("first");
-            $(".info_box .bg_block").fadeIn(300);
+            $(".info_box .bg_block").addClass("hide");
+            setTimeout(function() {
+                $(".info_box .bg_block").remove();
+                $(".bg_blocks_append .bg_block:eq(0)").clone().prependTo(".info_box");
+                $(".info_box .bg_block").fadeIn(300);
+                $(".info_box .bg_block").addClass("first");                
+            }, 800);            
         } else {
-            $(".info_box .bg_block:eq("+clickCounter+")").removeClass("first");
-            $(".bg_blocks_append .bg_block:eq("+clickCounter+")").clone().prependTo(".info_box");
-            $(".info_box .bg_block").fadeIn(300);
+            if($(".info_box .bg_block").length == 0) {
+                $(".bg_blocks_append .bg_block:eq("+clickCounter+")").clone().prependTo(".info_box");
+                $(".info_box .bg_block").addClass("first");
+                $(".info_box .bg_block").fadeIn(300);
+            } else {
+                $(".info_box .bg_block:eq("+clickCounter+")").removeClass("first");
+                $(".bg_blocks_append .bg_block:eq("+clickCounter+")").clone().prependTo(".info_box");
+                $(".info_box .bg_block:eq(0)").css({
+                    "display": "block",
+                    "opacity" : "0"
+                });
+                $(".info_box .bg_block:eq(0)").stop().animate({
+                    "opacity" : "1"
+                }, 300);
+            }
         }
         clickCounter++;
     });
@@ -462,23 +496,23 @@ $(document).ready(function() {
 
     // -----------------
 
-    // if($("#map").length > 0) {
-    //     var mapZoom = $("#map").attr("data-zoom");
-    //     var lat = $("#map").attr("data-lat");
-    //     var long = $("#map").attr("data-long");
-    //     ymaps.ready(function () {        
-    //         var myMap = new ymaps.Map('map', {
-    //             center: [long, lat],
-    //             zoom: mapZoom
-    //         }, {
-    //             searchControlProvider: 'yandex#search'
-    //         });
-    //         myPlacemark1 = new ymaps.Placemark([long, lat], {
-    //             hintContent: ''
-    //         }, {
-    //         });
-    //         myMap.geoObjects.add(myPlacemark1);        
-    //     });
-    // }
+    if($("#map").length > 0) {
+        var mapZoom = $("#map").attr("data-zoom");
+        var lat = $("#map").attr("data-lat");
+        var long = $("#map").attr("data-long");
+        ymaps.ready(function () {        
+            var myMap = new ymaps.Map('map', {
+                center: [long, lat],
+                zoom: mapZoom
+            }, {
+                searchControlProvider: 'yandex#search'
+            });
+            myPlacemark1 = new ymaps.Placemark([long, lat], {
+                hintContent: ''
+            }, {
+            });
+            myMap.geoObjects.add(myPlacemark1);        
+        });
+    }
 
 });

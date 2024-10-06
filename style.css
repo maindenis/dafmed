@@ -100,6 +100,7 @@ body {
     -ms-flex-direction: column;
     min-height: 100%;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 header {
@@ -305,6 +306,10 @@ textarea:focus {
 }
 
 .visible_900 {
+    display: none;
+}
+
+.visible_768 {
     display: none;
 }
 
@@ -963,6 +968,7 @@ textarea:focus {
 
 .sect_2_mp {
     overflow-x: hidden;
+    overflow-y: clip;
 }
 
 .two_cols {
@@ -999,10 +1005,11 @@ textarea:focus {
 }
 
 .info_box {
-    width: 560px;
+    width: 710px;
     height: 674px;
     position: relative;
     text-align: center;
+    cursor: pointer;
 }
 
 .bg_block {
@@ -1014,25 +1021,40 @@ textarea:focus {
     top: 0;
     left: 0;
     text-align: center;
-    -webkit-transition-property: top, transform;
+    -webkit-transition-property: top, transform, opacity;
     -webkit-transition-duration: 1s;
     -webkit-transition-timing-function: ease;
 
-    -moz-transition-property: top, transform;
+    -moz-transition-property: top, transform, opacity;
     -moz-transition-duration: 1s;
     -moz-transition-timing-function: ease;
 
-    -ms-transition-property: top, transform;
+    -ms-transition-property: top, transform, opacity;
     -ms-transition-duration: 1s;
     -ms-transition-timing-function: ease;
 
-    -o-transition-property: top, transform;
+    -o-transition-property: top, transform, opacity;
     -o-transition-duration: 1s;
     -o-transition-timing-function: ease;
 
-    transition-property: top, transform;
+    transition-property: top, transform, opacity;
     transition-duration: 1s;
     transition-timing-function: ease;
+}
+
+.info_box .bg_block.hide {
+    animation: toppositionhide 1s forwards !important;
+}
+
+@keyframes toppositionhide {
+    from {
+        margin-top: 0;
+        opacity: 1;
+    }
+    to {
+        margin-top: 400px;
+        opacity: 0;
+    }
 }
 
 .info_box .bg_block:nth-child(1) {
@@ -1057,10 +1079,12 @@ textarea:focus {
     from {
         left: 100px;
         top: 0;
+        opacity: 0;
     }
     to {
         left: 0;
         top: 0;
+        opacity: 1;
     }
 }
 
@@ -1072,7 +1096,7 @@ textarea:focus {
 }
 
 @keyframes topposition2 {
-  from {top: 0}
+  from {top: 0;}
   to {top: -74px;}
 }
 
@@ -1081,6 +1105,7 @@ textarea:focus {
     top: -140px;
     z-index: 4;
     animation: topposition3 1s forwards;
+    opacity: .65;
 }
 
 @keyframes topposition3 {
@@ -1093,6 +1118,7 @@ textarea:focus {
     top: -202px;
     z-index: 3;
     animation: topposition4 1s forwards;
+    opacity: .65;
 }
 
 @keyframes topposition4 {
@@ -1140,6 +1166,7 @@ textarea:focus {
     height: auto;
     max-width: 100%;
     max-height: 100%;
+    min-width: 70%;
     position: absolute;
     bottom: 0px;
     left: 50%;
@@ -2331,7 +2358,7 @@ span.circle_shape:before {
 
 .rev_site_thumb {
     display: block;
-    width: calc(25% - 4px);
+    width: 353px;
     margin: 2px;
     padding: 38px 20px 20px 20px;
     min-height: 184px;
@@ -6251,7 +6278,8 @@ span.circle_shape:before {
 .form_box_2 {
     display: flex;
     flex-direction: column;
-    width: 432px;
+    max-width: 432px;
+    width: 100%;
     min-height: 264px;
     background: #FFF;
     border-radius: 32px;
@@ -6539,13 +6567,13 @@ span.circle_shape:before {
 }
 
 .footer_two_cols_3 > div:nth-child(1) {
-    width: 60%;
-    padding: 10px 10px 10px 0;
+    width: calc(100% - 60px);
+    padding: 10px 5px 10px 0;
 }
 
 .footer_two_cols_3 > div:nth-child(2) {
-    width: 40%;
-    padding: 10px 10px 10px 0;
+    width: 60px;
+    padding: 10px 0 10px 5px;
     text-align: right;
 }
 
