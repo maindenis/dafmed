@@ -4388,6 +4388,14 @@ span.circle_shape:before {
     border-bottom: 1px solid transparent;
 }
 
+.sidebarWrappBg {
+    display: none;
+}
+
+#sidebarBtn {
+    display: none;
+}
+
 /*-- /Section 2 - Prices --*/
 
 /*-- Section 1 - Service Article --*/
@@ -4429,6 +4437,10 @@ span.circle_shape:before {
     background-image: url(img/yellow_shape_9.svg);
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.service_white_box_title .h1_wrapp_2_descript {
+    display: none;
 }
 
 .btn_wrapp_4 {
@@ -4677,6 +4689,10 @@ span.circle_shape:before {
 .service_doctors_slider .slider_3 .slick-next {
     bottom: 13px;
     left: calc(50% + 11px);
+}
+
+.close_sdebar {
+    display: none;
 }
 
 /*-- /Section 2 - Service Article --*/

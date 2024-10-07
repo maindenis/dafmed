@@ -8,12 +8,11 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">	
 	<title></title>
-	<!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
 </head>
 <body>
 	<div class="wrapper">
 	<!-- Header -->		
-	<header>
+	<header id="header">
 		<div class="row">
 			<div class="header_site">
 				<div class="left">
@@ -43,6 +42,17 @@
 									<li><a href="#">Блог</a></li>
 									<li><a href="#">Контакты</a></li>
 								</ul>
+								<div class="resp_two_cols">
+									<div>
+										<a href="tel:8(985) 394-53-35" class="white_resp_pill">
+											<img src="img/tel_small.svg" alt="" loading="lazy" />
+											8(985) 394-53-35
+										</a>
+									</div>
+									<div>
+										<a href="tel:8(985) 394-53-35" class="blue_resp_pill"  data-popup-link = "callback">Записаться</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -50,15 +60,40 @@
 				<div class="right">
 					<div class="two_pills">
 						<div>
-							<a href="tel:89853945335" class="white_pill">8(985) 394-53-35</a>
+							<div class="novisible_1124">
+								<a href="tel:89853945335" class="white_pill">8(985) 394-53-35</a>
+							</div>
+							<div class="visible_1124">
+								<a href="tel:89853945335" class="white_pill_resp">
+									<img src="img/tel.svg" alt="" loading="lazy" />
+								</a>
+							</div>
 						</div>
 						<div>
-							<a href="#" class="blue_pill">Записаться</a>
+							<div class="novisible_900">
+								<a href="#" class="blue_pill" data-popup-link = "callback">Записаться</a>
+							</div>
+							<div class="visible_900">
+								<button type="button" class="respBtn">
+									<img src="img/burger.svg" alt="" loading="lazy" />
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>				
 			</div>
-		</div>						
+		</div>
+	<!-- Resp close btn -->
+	<button type="button" class="closeNav">
+		<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M10.874 10.875L19.1236 19.1246" stroke="#102348" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+		<path d="M10.874 19.125L19.1236 10.8754" stroke="#102348" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+		</svg>
+	</button>
+	<!-- /Resp close btn -->
+	<!-- Resp Bg -->
+	<div class="res_bg"></div>
+	<!-- /Resp Bg -->					
 	</header>
 	<!-- /Header -->
 	<!-- Content -->
@@ -77,6 +112,9 @@
 					</ul>
 					<div class="h1_wrapp_2">
 						<h1><span class="yellow_shape_9">Лечение зубов</span></h1>
+					</div>
+					<div class="h1_wrapp_2_descript">
+						<p>Точную стоимость можно узнать в клинике</p>
 					</div>
 					<div class="btn_wrapp_4">
 						<a href="#" class="transparent_pill transparent_pill_2">
@@ -104,12 +142,19 @@
 	</section>
 	<!-- /Section 1 - Service Article -->
 	<!-- Section 2 - Service Article -->
-	<section class="sect_2_service">		
+	<section class="sect_2_service">
 		<div class="row">
 			<div class="service_templ_header">
 				<div>
-					<div class="cell_1">
-						<h3>Содержание</h3>
+					<div class="novisible_768">
+						<div class="cell_1">
+							<h3>Содержание</h3>
+						</div>
+					</div>
+					<div class="visible_768">
+						<button type="button" class="siderbarBtn2">
+							<img src="img/icon_07.svg" loading="lazy" alt="" />
+						</button>
 					</div>
 				</div>
 				<div>
@@ -118,262 +163,271 @@
 					</div>
 				</div>
 			</div>
-			<div class="service_templ_content" id="pricesTempl">
-				<div class="left" id="sidebarWrapp">
-					<div class="sidebar_scroll">
-						<div class="prices_nav_box" id="sidebar">
-							<ul class="prices_nav" id="sideNav">
-								<li><a href="#info" class="active">Основная информация</a></li>
-								<li><a href="#k">Кариес</a></li>
-								<li><a href="#p">Пульпит</a></li>
-								<li><a href="#pd">Периодонтит</a></li>
-								<li><a href="#prices">Цены</a></li>
-								<li><a href="#jobs">Работы</a></li>
-								<li><a href="#docs">Врачи</a></li>
-							</ul>
+			<div id="priceTemplResp">
+				<button type="button" class="close_sdebar">
+					<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M10.875 10.875L19.1246 19.1246" stroke="#102348" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M10.875 19.125L19.1246 10.8754" stroke="#102348" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</button>
+				<div class="service_templ_content" id="pricesTempl">
+					<div class="left" id="sidebarWrapp">
+						<div class="sidebar_scroll">
+							<div class="prices_nav_box" id="sidebar">
+								<ul class="prices_nav" id="sideNav">
+									<li><a href="#info" class="active">Основная информация</a></li>
+									<li><a href="#k">Кариес</a></li>
+									<li><a href="#p">Пульпит</a></li>
+									<li><a href="#pd">Периодонтит</a></li>
+									<li><a href="#prices">Цены</a></li>
+									<li><a href="#jobs">Работы</a></li>
+									<li><a href="#docs">Врачи</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="right">
+						<div class="service_article">
+							<div class="service_article_item scrollSect" id="info">
+								<h3>Лечение клиновидных дефектов</h3>
+								<p>Клиновидный дефект эмали зубов – это стоматологическое заболевание, при котором отмечается дефицит ткани с внешней стороны. При этом обнажается пришеечная область зуба, становясь похожей на клин.</p>
+								<p>При обнаружении дефекта, необходимо как можно раньше начать его лечение, так как заболевание способно быстро перейти на зубы, расположенные в непосредственной близости от пораженного.</p>
+								<p>Лечить клиновидные дефекты в Москве по выгодным ценам можно в клинике InWhite Medical. Благодаря квалифицированным специалистам и современному оснащению Вы сможете оперативно и практически безболезненно произвести избавление от клиновидных дефектов. Мы применяем качественные материалы и самые последние достижения стоматологии, что позволяет гарантировать эффективную диагностику и лечение заболевания любого масштаба поражения</p>
+							</div>
+							<div class="service_article_item scrollSect" id="k">
+								<h3>Причины появления клиновидного дефекта</h3>
+								<p>Известен целый ряд причин, приводящих к появлению дефекта клиновидной формы. Все их можно разделить на 3 больших группы.</p>
+								<p>Первая группа - механические причины. К ним относится:</p>
+								<ol>
+									<li>использование чрезмерно жестких зубных щеток;</li>
+									<li>нарушение правил гигиены зубов (чистка с помощью горизонтальных движений);</li>
+									<li>самостоятельные попытки пациента избавиться от зубного камня;</li>
+									<li>применение зубных паст с абразивными элементами, которые могут царапать эмаль.</li>
+								</ol>
+								<p>Вторая группа причин – химические. Клиновидные дефекты зубов в этом случае появляются из-за чрезмерного употребления в пищу большого количества газировки, соков и пищевых продуктов, содержащих агрессивные кислоты.</p>
+								<p>Третья группа причин – физико-механические. В этом случае клиновидный дефект зубов возникает при следующих патологиях:</p>
+								<ol>
+									<li>бруксизм (зубы сжимаются и скрипят во время сна);</li>
+									<li>аномалии положения отдельных зубов в ротовой полости;</li>
+									<li>неправильный прикус, в результате которого зубы испытывают большую нагрузку при жевании.</li>
+								</ol>
+								<p>Клиновидный дефект зубов может развиться как следствие воздействия одного или сразу нескольких негативных факторов.</p>
+								<img src="img/img_19.jpg" loading="lazy" alt="" />
+							</div>
+							<div class="service_article_item scrollSect" id="p">
+								<h3>Методы лечения клиновидных дефектов</h3>
+								<p>Лечат клиновидные дефекты самыми различными методами, которые подбираются в зависимости от степени выраженности заболевания. Перед началом лечения в обязательном порядке проводится диагностика. Врач оценивает состояние эмали, изменение ее оттенка и плотности, при постановке диагноза и выборе методов терапии он определяет реакцию зубов на холод и тепло, оценивает состояние десен и слизистых. После того, как диагностика будет закончена, стоматолог дифференцирует тип клиновидного дефекта.</p>
+								<p>Лечение производится одним из следующих методов:</p>
+								<ul>
+									<li>Реминерализация эмали зубов</li>
+								</ul>
+								<p>Применяется, если клиновидный дефект выражен не сильно (не более 0.5 мм). В этом случае сверлить поверхность не нужно, достаточно будет удалить налет и нанести на поверхность зубов специальные минерализующие растворы. В ряде случаев лечение предполагает применение аппаратов лазерной терапии, фоно- или электрофореза. Курс реминерализации составляет 7-20 дней в зависимости от степени распространения болезни.</p>
+								<ul>
+									<li>Пломбирование</li>
+								</ul>
+								<p>Лечение данным способом производится при средних и выраженных клиновидных дефектах. Однако если врач просто установит пломбу, как при кариесе, она может очень быстро выскочить, а заболевание будет прогрессировать. Вот почему необходимо, прежде всего, устранить причину клиновидного дефекта. Чтобы пломба держалась дольше, стоматолог применяет современные жидкотекучие композитные материалы. Обладая эластичностью и способностью полимеризоваться, эти инновационные составы дают возможность компенсировать чрезмерную нагрузку на пришеечную область зуба вследствие неправильного прикуса.</p>
+							</div>
+							<div class="service_article_item scrollSect" id="pd">
+								<h3>Периодонтит</h3>
+								<p>Лечение данным способом производится при средних и выраженных клиновидных дефектах. Однако если врач просто установит пломбу, как при кариесе, она может очень быстро выскочить, а заболевание будет прогрессировать. Вот почему необходимо, прежде всего, устранить причину клиновидного дефекта. Чтобы пломба держалась дольше, стоматолог применяет современные жидкотекучие композитные материалы. Обладая эластичностью и способностью полимеризоваться, эти инновационные составы дают возможность компенсировать чрезмерную нагрузку на пришеечную область зуба вследствие неправильного прикуса.</p>
+							</div>
+						</div>
+						<div class="service_prices scrollSect" id="prices">
+							<h3>Цены</h3>
+							<div class="prices_table_box service_prices_table_box">
+								<div class="prices_table">
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+									<div class="table_row">
+										<div>
+											<p>Механическая и <a href="#">медикаментозная обработка</a> одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="service_jobs scrollSect" id="jobs">
+							<h3>Работы</h3>
+							<div class="jobs_slider_wrapp">
+								<div class="jobs_slider">
+									<div class="job_slide">
+										<div class="beforeAfter_wrapp beforeAfter_2_wrapp">
+											<div class="beforeAfter beforeAfter_2">
+											  <img src="img/b.jpg"  loading="lazy" />
+											  <img src="img/a.jpg"  loading="lazy" />
+											</div>
+											<div class="b_wrapp">
+												<p>До</p>
+											</div>
+											<div class="a_wrapp">
+												<p>После</p>
+											</div>
+										</div>
+									</div>
+									<div class="job_slide">
+										<div class="beforeAfter_wrapp beforeAfter_2_wrapp">
+											<div class="beforeAfter beforeAfter_2">
+											  <img src="img/b.jpg"  loading="lazy" />
+											  <img src="img/a.jpg"  loading="lazy" />
+											</div>
+											<div class="b_wrapp">
+												<p>До</p>
+											</div>
+											<div class="a_wrapp">
+												<p>После</p>
+											</div>
+										</div>
+									</div>
+									<div class="job_slide">
+										<div class="beforeAfter_wrapp beforeAfter_2_wrapp">
+											<div class="beforeAfter beforeAfter_2">
+											  <img src="img/b.jpg"  loading="lazy" />
+											  <img src="img/a.jpg"  loading="lazy" />
+											</div>
+											<div class="b_wrapp">
+												<p>До</p>
+											</div>
+											<div class="a_wrapp">
+												<p>После</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="service_doctors_slider scrollSect" id="docs">
+							<h3>Специалисты по направлению</h3>
+							<div class="slider_3">
+								<div>
+									<div class="slider_3_slide">
+										<a href="#" class="doctor_thumb">
+											<div class="img_box">
+												<img src="img/doc_1.jpg" alt=""  loading="lazy" />
+												<div class="plus">
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g clip-path="url(#clip0_3835_7208)">
+													<path d="M10 4.16669V15.8334" stroke="#102348" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M4.16699 10H15.8337" stroke="#102348" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+													</g>
+													<defs>
+													<clipPath id="clip0_3835_7208">
+													<rect width="20" height="20" fill="white"/>
+													</clipPath>
+													</defs>
+													</svg>
+												</div>
+											</div>
+											<div class="doctor_thumb_descript">
+												<h3>Теймур И. И.</h3>
+												<h4>Стоматолог-терапевт</h4>
+												<p>11 лет опыта</p>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div>
+									<div class="slider_3_slide">
+										<a href="#" class="doctor_thumb">
+											<div class="img_box">
+												<img src="img/doc_2.jpg" alt="" loading="lazy" />
+												<div class="plus">
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g clip-path="url(#clip0_3835_7208)">
+													<path d="M10 4.16669V15.8334" stroke="#102348" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M4.16699 10H15.8337" stroke="#102348" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+													</g>
+													<defs>
+													<clipPath id="clip0_3835_7208">
+													<rect width="20" height="20" fill="white"/>
+													</clipPath>
+													</defs>
+													</svg>
+												</div>
+											</div>
+											<div class="doctor_thumb_descript">
+												<h3>Теймур И. И.</h3>
+												<h4>Стоматолог-терапевт</h4>
+												<p>11 лет опыта</p>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div>
+									<div class="slider_3_slide">
+										<a href="#" class="doctor_thumb">
+											<div class="img_box">
+												<img src="img/doc_3.jpg" alt=""  loading="lazy" />
+												<div class="plus">
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g clip-path="url(#clip0_3835_7208)">
+													<path d="M10 4.16669V15.8334" stroke="#102348" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M4.16699 10H15.8337" stroke="#102348" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+													</g>
+													<defs>
+													<clipPath id="clip0_3835_7208">
+													<rect width="20" height="20" fill="white"/>
+													</clipPath>
+													</defs>
+													</svg>
+												</div>
+											</div>
+											<div class="doctor_thumb_descript">
+												<h3>Теймур И. И.</h3>
+												<h4>Стоматолог-терапевт</h4>
+												<p>11 лет опыта</p>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div>
+									<div class="slider_3_slide">
+										<a href="#" class="doctor_thumb">
+											<div class="img_box">
+												<img src="img/doc_4.jpg" alt="" loading="lazy" />
+												<div class="plus">
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g clip-path="url(#clip0_3835_7208)">
+													<path d="M10 4.16669V15.8334" stroke="#102348" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M4.16699 10H15.8337" stroke="#102348" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+													</g>
+													<defs>
+													<clipPath id="clip0_3835_7208">
+													<rect width="20" height="20" fill="white"/>
+													</clipPath>
+													</defs>
+													</svg>
+												</div>
+											</div>
+											<div class="doctor_thumb_descript">
+												<h3>Теймур И. И.</h3>
+												<h4>Стоматолог-терапевт</h4>
+												<p>11 лет опыта</p>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="right">
-					<div class="service_article">
-						<div class="service_article_item scrollSect" id="info">
-							<h3>Лечение клиновидных дефектов</h3>
-							<p>Клиновидный дефект эмали зубов – это стоматологическое заболевание, при котором отмечается дефицит ткани с внешней стороны. При этом обнажается пришеечная область зуба, становясь похожей на клин.</p>
-							<p>При обнаружении дефекта, необходимо как можно раньше начать его лечение, так как заболевание способно быстро перейти на зубы, расположенные в непосредственной близости от пораженного.</p>
-							<p>Лечить клиновидные дефекты в Москве по выгодным ценам можно в клинике InWhite Medical. Благодаря квалифицированным специалистам и современному оснащению Вы сможете оперативно и практически безболезненно произвести избавление от клиновидных дефектов. Мы применяем качественные материалы и самые последние достижения стоматологии, что позволяет гарантировать эффективную диагностику и лечение заболевания любого масштаба поражения</p>
-						</div>
-						<div class="service_article_item scrollSect" id="k">
-							<h3>Причины появления клиновидного дефекта</h3>
-							<p>Известен целый ряд причин, приводящих к появлению дефекта клиновидной формы. Все их можно разделить на 3 больших группы.</p>
-							<p>Первая группа - механические причины. К ним относится:</p>
-							<ol>
-								<li>использование чрезмерно жестких зубных щеток;</li>
-								<li>нарушение правил гигиены зубов (чистка с помощью горизонтальных движений);</li>
-								<li>самостоятельные попытки пациента избавиться от зубного камня;</li>
-								<li>применение зубных паст с абразивными элементами, которые могут царапать эмаль.</li>
-							</ol>
-							<p>Вторая группа причин – химические. Клиновидные дефекты зубов в этом случае появляются из-за чрезмерного употребления в пищу большого количества газировки, соков и пищевых продуктов, содержащих агрессивные кислоты.</p>
-							<p>Третья группа причин – физико-механические. В этом случае клиновидный дефект зубов возникает при следующих патологиях:</p>
-							<ol>
-								<li>бруксизм (зубы сжимаются и скрипят во время сна);</li>
-								<li>аномалии положения отдельных зубов в ротовой полости;</li>
-								<li>неправильный прикус, в результате которого зубы испытывают большую нагрузку при жевании.</li>
-							</ol>
-							<p>Клиновидный дефект зубов может развиться как следствие воздействия одного или сразу нескольких негативных факторов.</p>
-							<img src="img/img_19.jpg" loading="lazy" alt="" />
-						</div>
-						<div class="service_article_item scrollSect" id="p">
-							<h3>Методы лечения клиновидных дефектов</h3>
-							<p>Лечат клиновидные дефекты самыми различными методами, которые подбираются в зависимости от степени выраженности заболевания. Перед началом лечения в обязательном порядке проводится диагностика. Врач оценивает состояние эмали, изменение ее оттенка и плотности, при постановке диагноза и выборе методов терапии он определяет реакцию зубов на холод и тепло, оценивает состояние десен и слизистых. После того, как диагностика будет закончена, стоматолог дифференцирует тип клиновидного дефекта.</p>
-							<p>Лечение производится одним из следующих методов:</p>
-							<ul>
-								<li>Реминерализация эмали зубов</li>
-							</ul>
-							<p>Применяется, если клиновидный дефект выражен не сильно (не более 0.5 мм). В этом случае сверлить поверхность не нужно, достаточно будет удалить налет и нанести на поверхность зубов специальные минерализующие растворы. В ряде случаев лечение предполагает применение аппаратов лазерной терапии, фоно- или электрофореза. Курс реминерализации составляет 7-20 дней в зависимости от степени распространения болезни.</p>
-							<ul>
-								<li>Пломбирование</li>
-							</ul>
-							<p>Лечение данным способом производится при средних и выраженных клиновидных дефектах. Однако если врач просто установит пломбу, как при кариесе, она может очень быстро выскочить, а заболевание будет прогрессировать. Вот почему необходимо, прежде всего, устранить причину клиновидного дефекта. Чтобы пломба держалась дольше, стоматолог применяет современные жидкотекучие композитные материалы. Обладая эластичностью и способностью полимеризоваться, эти инновационные составы дают возможность компенсировать чрезмерную нагрузку на пришеечную область зуба вследствие неправильного прикуса.</p>
-						</div>
-						<div class="service_article_item scrollSect" id="pd">
-							<h3>Периодонтит</h3>
-							<p>Лечение данным способом производится при средних и выраженных клиновидных дефектах. Однако если врач просто установит пломбу, как при кариесе, она может очень быстро выскочить, а заболевание будет прогрессировать. Вот почему необходимо, прежде всего, устранить причину клиновидного дефекта. Чтобы пломба держалась дольше, стоматолог применяет современные жидкотекучие композитные материалы. Обладая эластичностью и способностью полимеризоваться, эти инновационные составы дают возможность компенсировать чрезмерную нагрузку на пришеечную область зуба вследствие неправильного прикуса.</p>
-						</div>
-					</div>
-					<div class="service_prices scrollSect" id="prices">
-						<h3>Цены</h3>
-						<div class="prices_table_box service_prices_table_box">
-							<div class="prices_table">
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-								<div class="table_row">
-									<div>
-										<p>Механическая и <a href="#">медикаментозная обработка</a> одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="service_jobs scrollSect" id="jobs">
-						<h3>Работы</h3>
-						<div class="jobs_slider_wrapp">
-							<div class="jobs_slider">
-								<div class="job_slide">
-									<div class="beforeAfter_wrapp beforeAfter_2_wrapp">
-										<div class="beforeAfter beforeAfter_2">
-										  <img src="img/b.jpg"  loading="lazy" />
-										  <img src="img/a.jpg"  loading="lazy" />
-										</div>
-										<div class="b_wrapp">
-											<p>До</p>
-										</div>
-										<div class="a_wrapp">
-											<p>После</p>
-										</div>
-									</div>
-								</div>
-								<div class="job_slide">
-									<div class="beforeAfter_wrapp beforeAfter_2_wrapp">
-										<div class="beforeAfter beforeAfter_2">
-										  <img src="img/b.jpg"  loading="lazy" />
-										  <img src="img/a.jpg"  loading="lazy" />
-										</div>
-										<div class="b_wrapp">
-											<p>До</p>
-										</div>
-										<div class="a_wrapp">
-											<p>После</p>
-										</div>
-									</div>
-								</div>
-								<div class="job_slide">
-									<div class="beforeAfter_wrapp beforeAfter_2_wrapp">
-										<div class="beforeAfter beforeAfter_2">
-										  <img src="img/b.jpg"  loading="lazy" />
-										  <img src="img/a.jpg"  loading="lazy" />
-										</div>
-										<div class="b_wrapp">
-											<p>До</p>
-										</div>
-										<div class="a_wrapp">
-											<p>После</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="service_doctors_slider scrollSect" id="docs">
-						<h3>Специалисты по направлению</h3>
-						<div class="slider_3">
-							<div>
-								<div class="slider_3_slide">
-									<a href="#" class="doctor_thumb">
-										<div class="img_box">
-											<img src="img/doc_1.jpg" alt=""  loading="lazy" />
-											<div class="plus">
-												<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<g clip-path="url(#clip0_3835_7208)">
-												<path d="M10 4.16669V15.8334" stroke="#102348" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-												<path d="M4.16699 10H15.8337" stroke="#102348" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-												</g>
-												<defs>
-												<clipPath id="clip0_3835_7208">
-												<rect width="20" height="20" fill="white"/>
-												</clipPath>
-												</defs>
-												</svg>
-											</div>
-										</div>
-										<div class="doctor_thumb_descript">
-											<h3>Теймур И. И.</h3>
-											<h4>Стоматолог-терапевт</h4>
-											<p>11 лет опыта</p>
-										</div>
-									</a>
-								</div>
-							</div>
-							<div>
-								<div class="slider_3_slide">
-									<a href="#" class="doctor_thumb">
-										<div class="img_box">
-											<img src="img/doc_2.jpg" alt="" loading="lazy" />
-											<div class="plus">
-												<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<g clip-path="url(#clip0_3835_7208)">
-												<path d="M10 4.16669V15.8334" stroke="#102348" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-												<path d="M4.16699 10H15.8337" stroke="#102348" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-												</g>
-												<defs>
-												<clipPath id="clip0_3835_7208">
-												<rect width="20" height="20" fill="white"/>
-												</clipPath>
-												</defs>
-												</svg>
-											</div>
-										</div>
-										<div class="doctor_thumb_descript">
-											<h3>Теймур И. И.</h3>
-											<h4>Стоматолог-терапевт</h4>
-											<p>11 лет опыта</p>
-										</div>
-									</a>
-								</div>
-							</div>
-							<div>
-								<div class="slider_3_slide">
-									<a href="#" class="doctor_thumb">
-										<div class="img_box">
-											<img src="img/doc_3.jpg" alt=""  loading="lazy" />
-											<div class="plus">
-												<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<g clip-path="url(#clip0_3835_7208)">
-												<path d="M10 4.16669V15.8334" stroke="#102348" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-												<path d="M4.16699 10H15.8337" stroke="#102348" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-												</g>
-												<defs>
-												<clipPath id="clip0_3835_7208">
-												<rect width="20" height="20" fill="white"/>
-												</clipPath>
-												</defs>
-												</svg>
-											</div>
-										</div>
-										<div class="doctor_thumb_descript">
-											<h3>Теймур И. И.</h3>
-											<h4>Стоматолог-терапевт</h4>
-											<p>11 лет опыта</p>
-										</div>
-									</a>
-								</div>
-							</div>
-							<div>
-								<div class="slider_3_slide">
-									<a href="#" class="doctor_thumb">
-										<div class="img_box">
-											<img src="img/doc_4.jpg" alt="" loading="lazy" />
-											<div class="plus">
-												<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<g clip-path="url(#clip0_3835_7208)">
-												<path d="M10 4.16669V15.8334" stroke="#102348" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-												<path d="M4.16699 10H15.8337" stroke="#102348" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-												</g>
-												<defs>
-												<clipPath id="clip0_3835_7208">
-												<rect width="20" height="20" fill="white"/>
-												</clipPath>
-												</defs>
-												</svg>
-											</div>
-										</div>
-										<div class="doctor_thumb_descript">
-											<h3>Теймур И. И.</h3>
-											<h4>Стоматолог-терапевт</h4>
-											<p>11 лет опыта</p>
-										</div>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				<div class="sidebarWrappBg"></div>
 			</div>
 		</div>
 	</section>
@@ -525,6 +579,7 @@
 	<script src="vendors/js/beforeafter.min.js"></script>
 	<script src="slick/slick.min.js"></script>
 	<!-- <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"></script> -->
+	<script src="vendors/js/inputmask.js"></script>
 	<script src="js/scripts.js"></script>
 </body>
 </html>

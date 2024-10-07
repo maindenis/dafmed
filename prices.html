@@ -8,12 +8,11 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">	
 	<title></title>
-	<!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
 </head>
 <body>
 	<div class="wrapper">
 	<!-- Header -->		
-	<header>
+	<header id="header">
 		<div class="row">
 			<div class="header_site">
 				<div class="left">
@@ -43,6 +42,17 @@
 									<li><a href="#">Блог</a></li>
 									<li><a href="#">Контакты</a></li>
 								</ul>
+								<div class="resp_two_cols">
+									<div>
+										<a href="tel:8(985) 394-53-35" class="white_resp_pill">
+											<img src="img/tel_small.svg" alt="" loading="lazy" />
+											8(985) 394-53-35
+										</a>
+									</div>
+									<div>
+										<a href="tel:8(985) 394-53-35" class="blue_resp_pill"  data-popup-link = "callback">Записаться</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -50,15 +60,40 @@
 				<div class="right">
 					<div class="two_pills">
 						<div>
-							<a href="tel:89853945335" class="white_pill">8(985) 394-53-35</a>
+							<div class="novisible_1124">
+								<a href="tel:89853945335" class="white_pill">8(985) 394-53-35</a>
+							</div>
+							<div class="visible_1124">
+								<a href="tel:89853945335" class="white_pill_resp">
+									<img src="img/tel.svg" alt="" loading="lazy" />
+								</a>
+							</div>
 						</div>
 						<div>
-							<a href="#" class="blue_pill">Записаться</a>
+							<div class="novisible_900">
+								<a href="#" class="blue_pill" data-popup-link = "callback">Записаться</a>
+							</div>
+							<div class="visible_900">
+								<button type="button" class="respBtn">
+									<img src="img/burger.svg" alt="" loading="lazy" />
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>				
 			</div>
-		</div>						
+		</div>
+	<!-- Resp close btn -->
+	<button type="button" class="closeNav">
+		<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M10.874 10.875L19.1236 19.1246" stroke="#102348" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+		<path d="M10.874 19.125L19.1236 10.8754" stroke="#102348" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+		</svg>
+	</button>
+	<!-- /Resp close btn -->
+	<!-- Resp Bg -->
+	<div class="res_bg"></div>
+	<!-- /Resp Bg -->					
 	</header>
 	<!-- /Header -->
 	<!-- Content -->
@@ -110,387 +145,393 @@
 					</div>
 				</div>
 			</div>
-			<div class="prices_templ" id="pricesTempl">
-				<div class="left" id="sidebarWrapp">
-					<div class="sidebar_scroll">
-						<div class="prices_nav_box" id="sidebar">
-							<ul class="prices_nav" id="sideNav">
-								<li><a href="#t" class="active"><span>Лечение зубов</span><span>12</span></a></li>
-								<li><a href="#o"><span>Отбеливание</span><span>9</span></a></li>
-								<li><a href="#g"><span>Гигиена полости рта</span><span>2</span></a></li>
-								<li><a href="#v"><span>Виниры и коронки</span><span>8</span></a></li>
-								<li><a href="#l"><span>Лечение пародонта</span><span>2</span></a></li>
-								<li><a href="#d"><span>Диагностика</span><span>4</span></a></li>
-								<li><a href="#i"><span>Имплантация и хирургия</span><span>8</span></a></li>
-								<li><a href="#ii"><span>Исправление прикуса</span><span>4</span></a></li>
-							</ul>
+			<div id="priceTemplResp">
+				<div class="prices_templ" id="pricesTempl">
+					<div class="left" id="sidebarWrapp">
+						<div class="sidebar_scroll">
+							<div class="prices_nav_box" id="sidebar">
+								<ul class="prices_nav" id="sideNav">
+									<li><a href="#t" class="active"><span>Лечение зубов</span><span>12</span></a></li>
+									<li><a href="#o"><span>Отбеливание</span><span>9</span></a></li>
+									<li><a href="#g"><span>Гигиена полости рта</span><span>2</span></a></li>
+									<li><a href="#v"><span>Виниры и коронки</span><span>8</span></a></li>
+									<li><a href="#l"><span>Лечение пародонта</span><span>2</span></a></li>
+									<li><a href="#d"><span>Диагностика</span><span>4</span></a></li>
+									<li><a href="#i"><span>Имплантация и хирургия</span><span>8</span></a></li>
+									<li><a href="#ii"><span>Исправление прикуса</span><span>4</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="right">
+						<div class="prices_tables scrollSect" id="t">
+							<div class="prices_tables_title">
+								<h3>Лечение зубов</h3>
+							</div>
+							<div class="prices_table_box">
+								<h3>Лечение каналов</h3>
+								<div class="prices_table">
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+									<div class="table_row">
+										<div>
+											<p>Механическая и <a href="#">медикаментозная обработка</a> одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="prices_table_box">
+								<h3>Лечение кариеса</h3>
+								<div class="prices_table">
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="prices_table_box">
+								<h3>Клиновидные дефекты</h3>
+								<div class="prices_table">
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+								</div>
+							</div>						
+						</div>
+						<div class="prices_tables scrollSect" id="o">
+							<div class="prices_tables_title">
+								<h3>Отбеливание</h3>
+							</div>
+							<div class="prices_table_box">
+								<h3>Лечение каналов под микроскопом</h3>
+								<div class="prices_table">
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="prices_table_box">
+								<h3>Отбеливание</h3>
+								<div class="prices_table">
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="prices_tables scrollSect" id="g">
+							<div class="prices_tables_title">
+								<h3>Гигиена полости рта</h3>
+							</div>
+							<div class="prices_table_box">
+								<h3>Гигиена полости рта</h3>
+								<div class="prices_table">
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="prices_tables scrollSect" id="v">
+							<div class="prices_tables_title">
+								<h3>Виниры и коронки</h3>
+							</div>
+							<div class="prices_table_box">
+								<h3>Виниры и коронки</h3>
+								<div class="prices_table">
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="prices_tables scrollSect" id="l">
+							<div class="prices_tables_title">
+								<h3>Лечение пародонта</h3>
+							</div>
+							<div class="prices_table_box">
+								<h3>Лечение пародонта</h3>
+								<div class="prices_table">
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="prices_tables scrollSect" id="d">
+							<div class="prices_tables_title">
+								<h3>Диагностика</h3>
+							</div>
+							<div class="prices_table_box">
+								<h3>Диагностика</h3>
+								<div class="prices_table">
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="prices_tables scrollSect" id="i">
+							<div class="prices_tables_title">
+								<h3>Имплантация и хирургия</h3>
+							</div>
+							<div class="prices_table_box">
+								<h3>Имплантация и хирургия</h3>
+								<div class="prices_table">
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="prices_tables scrollSect" id="ii">
+							<div class="prices_tables_title">
+								<h3>Исправление прикуса</h3>
+							</div>
+							<div class="prices_table_box">
+								<h3>Исправление прикуса</h3>
+								<div class="prices_table">
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+									<div class="table_row">
+										<div>
+											<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
+										</div>
+										<div>
+											<p>3 500 ₽</p>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="right">
-					<div class="prices_tables scrollSect" id="t">
-						<div class="prices_tables_title">
-							<h3>Лечение зубов</h3>
-						</div>
-						<div class="prices_table_box">
-							<h3>Лечение каналов</h3>
-							<div class="prices_table">
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-								<div class="table_row">
-									<div>
-										<p>Механическая и <a href="#">медикаментозная обработка</a> одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="prices_table_box">
-							<h3>Лечение кариеса</h3>
-							<div class="prices_table">
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="prices_table_box">
-							<h3>Клиновидные дефекты</h3>
-							<div class="prices_table">
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-							</div>
-						</div>						
-					</div>
-					<div class="prices_tables scrollSect" id="o">
-						<div class="prices_tables_title">
-							<h3>Отбеливание</h3>
-						</div>
-						<div class="prices_table_box">
-							<h3>Лечение каналов под микроскопом</h3>
-							<div class="prices_table">
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="prices_table_box">
-							<h3>Отбеливание</h3>
-							<div class="prices_table">
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="prices_tables scrollSect" id="g">
-						<div class="prices_tables_title">
-							<h3>Гигиена полости рта</h3>
-						</div>
-						<div class="prices_table_box">
-							<h3>Гигиена полости рта</h3>
-							<div class="prices_table">
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="prices_tables scrollSect" id="v">
-						<div class="prices_tables_title">
-							<h3>Виниры и коронки</h3>
-						</div>
-						<div class="prices_table_box">
-							<h3>Виниры и коронки</h3>
-							<div class="prices_table">
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="prices_tables scrollSect" id="l">
-						<div class="prices_tables_title">
-							<h3>Лечение пародонта</h3>
-						</div>
-						<div class="prices_table_box">
-							<h3>Лечение пародонта</h3>
-							<div class="prices_table">
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="prices_tables scrollSect" id="d">
-						<div class="prices_tables_title">
-							<h3>Диагностика</h3>
-						</div>
-						<div class="prices_table_box">
-							<h3>Диагностика</h3>
-							<div class="prices_table">
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="prices_tables scrollSect" id="i">
-						<div class="prices_tables_title">
-							<h3>Имплантация и хирургия</h3>
-						</div>
-						<div class="prices_table_box">
-							<h3>Имплантация и хирургия</h3>
-							<div class="prices_table">
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="prices_tables scrollSect" id="ii">
-						<div class="prices_tables_title">
-							<h3>Исправление прикуса</h3>
-						</div>
-						<div class="prices_table_box">
-							<h3>Исправление прикуса</h3>
-							<div class="prices_table">
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-								<div class="table_row">
-									<div>
-										<p>Механическая и медикаментозная обработка одноканального зуба с пломбированием</p>
-									</div>
-									<div>
-										<p>3 500 ₽</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				<div class="sidebarWrappBg"></div>
 			</div>
 		</div>
 	</section>
+	<!-- Fixed Sidebar Btn -->
+	<a href="#" class="fixed_sidebar_btn" id="sidebarBtn">Услуги:</a>
+	<!-- /Fixed Sidebar Btn -->
 	<!-- /Section 2 - Prices -->
 	<!-- Section 12 - Main Page -->
 	<section class="sect_12_mp">

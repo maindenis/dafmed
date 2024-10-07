@@ -1,11 +1,20 @@
 function getSidebarScrollParams() {
     if( $(".sidebar_scroll").length > 0 && bodyWidth > 767) {
-        filtersCoord = $(document).scrollTop();    
+        if(bodyWidth <= 900) {
+            filtersCoord = $(document).scrollTop() + $("#header").height();
+        } else {
+            filtersCoord = $(document).scrollTop();
+        }
         mapCoord = $("#pricesTempl").offset().top;
         if(filtersCoord >= mapCoord - 20) {            
             $(".sidebar_scroll").addClass("fixed");
+            if(bodyWidth <= 900) {
+                headerHeight = $("#header").height();
+            } else {
+                headerHeight = 0;
+            }
             $(".sidebar_scroll").css({
-                "top" : 20 + "px",
+                "top" : 20 + headerHeight + "px",
                 "width" : $("#sidebarWrapp").width() + "px",
                 "left" : $("#sidebarWrapp").offset().left + "px"
             });
@@ -19,7 +28,8 @@ function getSidebarScrollParams() {
         } else {
             $(".sidebar_scroll").removeClass("fixed");
             $(".sidebar_scroll").css({
-                "top" : 0
+                "top" : 0,
+                "width" : "100%"
             });
         }
     }
@@ -48,6 +58,7 @@ bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
 
 $(window).resize(function() {
 bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
+getSidebarScrollParams();
 });
 
 $(document).scroll(function() {
@@ -208,7 +219,16 @@ $(document).ready(function() {
             slidesToShow: 2,
             slidesToScroll: 1,
             variableWidth: true,
-            draggable: false
+            draggable: false,
+            responsive: [
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToScroll: 1,
+                    dots: true
+                  }                  
+                }
+              ]
         });
     }
 
@@ -496,23 +516,56 @@ $(document).ready(function() {
 
     // -----------------
 
-    if($("#map").length > 0) {
-        var mapZoom = $("#map").attr("data-zoom");
-        var lat = $("#map").attr("data-lat");
-        var long = $("#map").attr("data-long");
-        ymaps.ready(function () {        
-            var myMap = new ymaps.Map('map', {
-                center: [long, lat],
-                zoom: mapZoom
-            }, {
-                searchControlProvider: 'yandex#search'
-            });
-            myPlacemark1 = new ymaps.Placemark([long, lat], {
-                hintContent: ''
-            }, {
-            });
-            myMap.geoObjects.add(myPlacemark1);        
-        });
-    }
+    $("#sidebarBtn, .siderbarBtn2").on("click", function(e) {
+        e.preventDefault();
+        $("#priceTemplResp").toggleClass("active");
+        if($("#priceTemplResp").hasClass("active")) {
+            $(this).addClass("active");
+        } else {
+            $(this).removeClass("active");
+        }
+    });
+
+    $(".sidebarWrappBg, .close_sdebar").on("click", function(e) {
+        e.preventDefault();
+        $("#priceTemplResp").removeClass("active");
+        $("#sidebarBtn").removeClass("active");
+    });
+
+    $("#sideNav a").on("click", function() {
+        if(bodyWidth <= 768) {
+            parent = $(this).closest("#priceTemplResp");
+            parent.removeClass("active");
+            $("#sidebarBtn").removeClass("active");
+        }
+    });
+
+    $(this).keydown(function(eventObject){
+      if (eventObject.which == 27) {
+        $("#priceTemplResp").removeClass("active");
+        $("#sidebarBtn").removeClass("active");
+      }
+    });
+
+    // -----------------
+
+    // if($("#map").length > 0) {
+    //     var mapZoom = $("#map").attr("data-zoom");
+    //     var lat = $("#map").attr("data-lat");
+    //     var long = $("#map").attr("data-long");
+    //     ymaps.ready(function () {        
+    //         var myMap = new ymaps.Map('map', {
+    //             center: [long, lat],
+    //             zoom: mapZoom
+    //         }, {
+    //             searchControlProvider: 'yandex#search'
+    //         });
+    //         myPlacemark1 = new ymaps.Placemark([long, lat], {
+    //             hintContent: ''
+    //         }, {
+    //         });
+    //         myMap.geoObjects.add(myPlacemark1);        
+    //     });
+    // }
 
 });
