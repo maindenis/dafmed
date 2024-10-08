@@ -258,6 +258,25 @@ $(document).ready(function() {
             slidesToShow: 2,
             slidesToScroll: 1,
             variableWidth: true,
+            responsive: [
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true
+                  }                  
+                },
+                {
+                  breakpoint: 390,
+                  settings: {
+                    slidesToScroll: 1,
+                    dots: true,
+                    slidesToShow: 1,
+                    variableWidth: false,
+                  }                  
+                }
+              ]
         });
     }
 

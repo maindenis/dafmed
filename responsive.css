@@ -340,6 +340,78 @@ span.circle_shape:before {
 
 /*-- /Section 11 - Main Page --*/
 
+/*-- Section 1 - Doctors --*/
+
+.title_grey_box {
+    padding-bottom: 205px;
+}
+
+.title_grey_box .h1_wrapp_2_descript {
+    padding: 21px 0 20px 0;
+}
+
+.photo_box_1 {
+    bottom: -4px;
+    width: 155px;
+    height: 193px;
+    top: auto;
+    left: -50px;
+}
+
+.photo_box_2 {
+    width: 155px;
+    height: 193px;
+    top: auto;
+    left: -24px;
+    bottom: -51px;
+}
+
+.photo_box_3 {
+    display: none;
+}
+
+.photo_box_4 {
+    width: 132px;
+    height: 193px;
+    top: auto;
+    right: 32px;
+    bottom: -1px;
+}
+
+.photo_box_5 {
+    width: 132px;
+    height: 193px;
+    top: auto;
+    bottom: -84px;
+    right: -12px;
+}
+
+.photo_box {
+    border: 6px solid #fff;
+}
+
+.photo_box .img_box {
+    height: 155px;
+}
+
+/*-- /Section 1 - Doctors --*/
+
+/*-- Section 2 - Doctors --*/
+
+.doctors_thumbs {
+    padding: 10px 0 30px 0;
+}
+
+/*-- /Section 2 - Doctors --*/
+
+/*-- Section 2 - Testimonials Page --*/
+
+.rev_thumb_2 {
+    width: calc(50% - 4px);
+}
+
+/*-- /Section 2 - Testimonials Page --*/
+
 }
 
 @media only screen and (max-width: 1024px) {
@@ -576,6 +648,61 @@ span.circle_shape:before {
 }
 
 /*-- /Section 2 - Service Article --*/
+
+/*-- Section 1 - Doctor Page --*/
+
+.doctor_templ > .left {
+    width: 340px;
+}
+
+.doctor_templ > .right {
+    width: calc(100% - 340px);
+    padding-left: 20px;
+}
+
+.doc_ttile h2 {
+    padding: 5px 0;
+    font-size: 28px;
+    line-height: 130%;
+}
+
+.doc_ttile h3 {
+    padding: 2px 0;
+    font-size: 18px;
+    line-height: 130%;
+}
+
+.doc_ttile p {
+    padding: 2px 0;
+    font-size: 18px;
+    line-height: 130%;
+}
+
+.services_tags li a {
+    padding: 5px 10px;
+    min-height: 39px;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.about_doc {
+    margin: 14px 0 14px 0;
+    padding: 15px;
+    border-radius: 18px;
+}
+
+.about_doc h3 {
+    padding-bottom: 12px;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.about_doc p {
+    font-size: 14px;
+    line-height: 19px;
+}
+
+/*-- /Section 1 - Doctor Page --*/
 
 /*-- Footer --*/
 
@@ -1407,10 +1534,216 @@ span.circle_shape:before {
 
 /*-- /Section 2 - Service Article --*/
 
+/*-- Section 1 - Doctors --*/
+
+.yellow_shape_6 {
+    background-image: url(img/yellow_shape_6.svg);
+    background-position: center 10px;
+    padding: 0 20px;
+    font-size: 48px;
+    line-height: 125%;
+}
+
+/*-- /Section 1 - Doctors --*/
+
+/*-- Section 2 - Doctors --*/
+
+.doctor_thumb_2 .img_box img {
+    width: auto;
+    height: 100%;
+    min-height: 100%;
+    min-width: auto;
+}
+
+/*-- /Section 2 - Doctors --*/
+
+/*-- Section 1 - Testimonials Page --*/
+
+.white_box_rewvs {
+    border-radius: 20px;
+    margin-top: 3px;
+    padding: 6px 10px 234px 10px;
+}
+
+.white_box_rewvs_title {
+    padding: 20px 0 31px 0;
+}
+
+.white_box_rewvs_title h3 {
+    font-size: 12px;
+    line-height: 17px;
+}
+
+.white_box_rewvs_title h1 {
+    padding-top: 16px;
+    font-size: 32px;
+    line-height: 130%;
+}
+
+.yellow_shape_10 {
+    padding: 0 5px 0 8px;
+    font-size: 45px;
+}
+
+.photo_box_wrapp_1 {
+    bottom: 114px;
+    left: -4px;
+    transform: scale(.6);
+}
+
+.photo_box_wrapp_2 {
+    transform: scale(.6);
+    bottom: 48px;
+    left: -10px;
+}
+
+.photo_box_wrapp_3 {
+    transform: scale(.6);
+    bottom: 5px;
+    left: 26px;
+}
+
+.photo_box_wrapp_4 {
+    transform: scale(.6);
+    bottom: 35px;
+    left: 68px;
+}
+
+.photo_box_wrapp_5 {
+    transform: scale(.6);
+    bottom: 134px;
+    right: -6px;
+}
+
+.photo_box_wrapp_6 {
+    display: none;
+}
+
+.photo_box_wrapp_7 {
+    transform: scale(.6);
+    bottom: 51px;
+    right: 57px;
+}
+
+.photo_box_wrapp_8 {
+    transform: scale(.6);
+    bottom: 17px;
+    right: 12px;
+}
+
+/*-- /Section 1 - Testimonials Page --*/
+
+/*-- Section 2 - Testimonials Page --*/
+
+.sect_3_testimonials {
+    padding: 57px 0 26px 0;
+}
+
+.yand_revs_header h2 {
+    font-size: 34px;
+    line-height: 130%;
+}
+
+.yand_revs_wrapp {
+    border-radius: 20px;
+    padding: 54px 20px 34px 20px;
+}
+
+.h2_wrapp_center.big_2 h2 {
+    font-size: 32px;
+    line-height: 120%;
+}
+
+.revs_thumbs_2 {
+    padding: 16px 0 37px 0;
+}
+
+.rev_thumb_2 {
+    border-radius: 12px;
+}
+
+/*-- /Section 2 - Testimonials Page --*/
+
 /*-- Popup --*/
+
+.popup_title h3 {
+    padding: 10px 0 25px 21px;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: left;
+}
 
 .popup_content_3 .callback_form:before {
     display: none;
+}
+
+.popup_content_4 {
+    border-radius: 20px 20px 0 0;
+    padding: 38px 20px 25px 20px;
+}
+
+.popup_content_4 .popup_title h3 {
+    padding: 20px 0 18px 0;
+    font-size: 24px;
+    line-height: 130%;
+}
+
+.popup_content_4 .popup_title p{
+    font-size: 15px;
+    line-height: 130%;
+}
+
+.popup_content {
+    border-radius: 20px 20px 0 0;
+    padding: 19px 8px 8px 8px;
+}
+
+.testimonial_form {
+    border-radius: 20px;
+}
+
+.submit_wrapp_2 {
+    padding: 225px 0 17px 0;
+}
+
+.suc_rev_content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 250px);
+    min-height: 300px;
+    padding: 19px 8px 40px 8px;
+}
+
+.suc_height {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.suc_rev_content img {
+    display: block;
+    width: auto;
+    margin: 0 0 30px 14%;
+    max-width: 100%;
+    height: 207px;
+}
+
+.popup_title h3 {
+    text-align: center;
+    padding: 0 0 25px 0;
+    font-size: 24px;
+}
+
+.popup_content_2 {
+    margin: 116px 0 0 0;
+}
+
+.suc_rev_content .transparent_pill {
+    min-height: 64px;
+    font-size: 14px;
+    line-height: 20px;
+    border-radius: 20px;
+    border-width: 1px;
 }
 
 /*-- /Popup --*/
@@ -2370,6 +2703,128 @@ h1 {
 
 /*-- /Section 2 - Service Article --*/
 
+/*-- Section 1 - Doctor Page --*/
+
+.rev_header {
+    padding: 10px 0 13px 0;
+}
+
+.rev_box_2 {
+    margin: 0 0 8px 0;
+}
+
+.jobs_slider_2 .slick-prev {
+    width: 36px;
+    height: 36px;
+    bottom: -72px;
+    right: auto;
+    left: 12px;
+}
+
+.jobs_slider_2 .slick-next {
+    width: 36px;
+    height: 36px;
+    bottom: -72px;
+    right: 12px;
+}
+
+.jobs_slider_2 .slick-dots {
+    bottom: -68px;
+    left: 0;
+    justify-content: center;
+    width: 100%;
+}
+
+.jobs_slider_2 .job_slide {
+    width: 320px;
+}
+
+/*-- /Section 1 - Doctor Page --*/
+
+/*-- Section 1 - Testimonials Page --*/
+
+.transparent_pill {
+    padding: 10px 11px;
+    min-height: 42px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.btn_wrapp_5 .transparent_pill {
+    min-width: 160px;
+}
+
+/*-- /Section 1 - Testimonials Page --*/
+
+/*-- Section 2 - Testimonials Page --*/
+
+.yand_revs_header {
+    text-align: left;
+}
+
+.yand_revs_header h2 {
+    font-size: 20px;
+    line-height: 130%;
+}
+
+.yand_revs_slider {
+    margin: 0 -2px;
+    padding: 16px 0 65px 0;
+}
+
+.yand_revs_wrapp {
+    padding: 14px 20px 34px 20px;
+}
+
+.yand_rev {
+    padding: 24px;
+    width: 320px;
+}
+
+.yand_rev_text {
+    min-height: 419px;
+}
+
+.yand_rev_text p {
+    font-size: 14px;
+    line-height: 130%;
+}
+
+.yand_rev_text p a {
+    font-size: 14px;
+    line-height: 130%;
+}
+
+.rev_author_2 p {
+    font-size: 18px;
+    line-height: 120%;
+}
+
+.yand_revs_slider .slick-prev {
+    width: 36px;
+    height: 36px;
+    bottom: -15px;
+    right: auto;
+    left: 0;
+}
+
+.yand_revs_slider .slick-next {
+    width: 36px;
+    height: 36px;
+    bottom: -15px;
+    left: auto;
+    right: 0;
+}
+
+.yand_revs_slider .slick-dots {
+    bottom: -13px;
+    left: 0;
+    justify-content: center;
+    width: 100%;
+}
+
+/*-- /Section 2 - Testimonials Page --*/
+
 /*-- Footer --*/
 
 .footer_section {
@@ -2652,6 +3107,41 @@ h1 {
 
 /*-- /Section 11 - Main Page --*/
 
+/*-- Section 2 - Doctors --*/
+
+.doctor_thumb_2 {
+    width: calc(50% - 4px);
+}
+
+/*-- /Section 2 - Doctors --*/
+
+/*-- Section 1 - Doctor Page --*/
+
+.doctor_templ > .left {
+    width: 100%;
+    padding: 5px 0;
+}
+
+.doctor_templ > .right {
+    width: 100%;
+    padding: 5px 0;
+}
+
+.doc_img {
+    margin: 0 auto;
+}
+
+/*-- /Section 1 - Doctor Page --*/
+
+/*-- Section 2 - Testimonials Page --*/
+
+.rev_thumb_2_text p {
+    font-size: 14px;
+    line-height: 130%;
+}
+
+/*-- /Section 2 - Testimonials Page --*/
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -2812,6 +3302,30 @@ h1 {
 
 /*-- /Section 1 - Service Article --*/
 
+/*-- Section 2 - Testimonials Page --*/
+
+.h2_wrapp_center.big_2 h2 {
+    font-size: 24px;
+}
+
+.revs_thumbs_2 {
+    padding: 5px 0 37px 0;
+}
+
+.rev_thumb_2 {
+    width: calc(100% - 4px);
+}
+
+.pagination_wrapp .next_page {
+    margin-left: 31px;
+}
+
+.pagination_wrapp .prev_page {
+    margin-right: 31px;
+}
+
+/*-- /Section 2 - Testimonials Page --*/
+
 /*-- Footer --*/
 
 .footer_two_cols_3 {
@@ -2824,6 +3338,121 @@ h1 {
 }
 
 /*-- /Footer --*/
+
+}
+
+@media only screen and (max-width: 480px) {
+
+/*-- Section 1 - Doctor Page --*/
+
+.doc_img {
+    height: 378px;
+    border-radius: 22px;
+}
+
+.doctor_templ {
+    padding: 5px 0 0 0;
+}
+
+.doctor_templ > .right {
+    width: 100%;
+    margin-top: -40px;
+    background: rgba(240, 240, 240, .9);
+    box-shadow: 0 0 100px rgba(0, 0, 0, .05);
+    backdrop-filter: blur(25px);
+    border-radius: 20px 20px 0 0;
+    padding: 0;
+}
+
+.doc_ttile {
+    padding: 17px 17px 0 17px;
+}
+
+.doc_ttile h2 {
+    padding: 5px 0;
+    font-size: 24px;
+    line-height: 130%;
+}
+
+.doc_ttile h3 {
+    padding: 2px 0;
+    font-size: 16px;
+    line-height: 130%;
+}
+
+.doc_ttile p {
+    padding: 5px 0;
+    font-size: 16px;
+    line-height: 130%;
+}
+
+.services_tags li a {
+    padding: 5px 10px;
+    min-height: 40px;
+    font-size: 14px;
+    line-height: 130%;
+}
+
+.about_doc_resp {
+    margin-top: 28px;
+    padding: 10px;
+    background: #FFF;
+    border-radius: 20px;
+}
+
+.about_doc {
+    margin: 0;
+    padding: 7px 15px 5px 15px;
+    border-radius: 0;
+    background: transparent;
+}
+
+.about_doc_resp .blue_pill {
+    min-height: 48px;
+    font-size: 14px;
+    border-radius: 16px;
+}
+
+.about_doc h3 {
+    padding-bottom: 9px;
+    font-size: 20px;
+    line-height: 130%;
+}
+
+.doc_info_box {
+    margin: 16px 0 12px 0;
+    padding: 16px 18px 8px 18px;
+}
+
+.doc_info_box h3 {
+    padding: 0;
+    font-size: 20px;
+    line-height: 130%;
+}
+
+.doc_info_item {
+    padding: 11px 0 11px 0;
+}
+
+.doc_info_item p {
+    font-size: 14px;
+    line-height: 130%;
+}
+
+.doc_info_item_row {
+    padding: 12px 0 12px 0;
+}
+
+.doc_info_item_row p {
+    font-size: 14px;
+    line-height: 130%;
+}
+
+.rev_header {
+    padding: 10px 0 13px 0;
+}
+
+/*-- /Section 1 - Doctor Page --*/
 
 }
 
@@ -2845,9 +3474,71 @@ h1 {
 
 /*-- /Section 4 - Main Page --*/
 
+/*-- Section 2 - Doctors --*/
+
+.doctor_thumb_2 {
+    width: calc(100% - 4px);
+}
+
+.doctor_thumb_2 .img_box {
+    height: 376px;
+}
+
+.doctor_thumb_2 .img_box img {
+    width: auto;
+    height: 100%;
+    min-height: auto;
+    min-width: 100%;
+}
+
+/*-- /Section 2 - Doctors --*/
+
+/*-- Section 2 - Testimonials Page --*/
+
+.yand_rev {
+    width: 100%;
+    max-width: 320px;
+}
+
+/*-- /Section 2 - Testimonials Page --*/
+
 }
 
 @media only screen and (max-width: 365px) {
+
+/*-- Section 1 - Doctor Page --*/
+
+.jobs_slider_2 .job_slide {
+    width: 260px;
+}
+
+/*-- /Section 1 - Doctor Page --*/
+
+/*-- Section 1 - Testimonials Page --*/
+
+.white_box_rewvs_title h1 {
+    font-size: 22px;
+}
+
+.photo_box_wrapp_4 {
+    left: 48px;
+}
+
+.photo_box_wrapp_7 {
+    right: 31px;
+}
+
+/*-- /Section 1 - Testimonials Page --*/
+
+/*-- Section 2 - Testimonials Page --*/
+.pagination_wrapp .next_page {
+    margin-left: 20px;
+}
+
+.pagination_wrapp .prev_page {
+    margin-right: 20px;
+}
+/*-- /Section 2 - Testimonials Page --*/
 
 /*-- Footer --*/
 

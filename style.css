@@ -336,6 +336,11 @@ textarea:focus {
     text-align: left;
 }
 
+.z_2 {
+    position: relative;
+    z-index: 2;
+}
+
 /*-------------------------------------------*/
 /* ----- HEADER ------ */
 /*-------------------------------------------*/
@@ -1726,6 +1731,11 @@ span.circle_shape:before {
 }
 
 .input_wrapp p {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     padding: 6px 0 6px 0;
     font-size: 13px;
     line-height: 16px;
@@ -6680,7 +6690,7 @@ body.fixed {
 .testimonial_form {
     margin: 0 auto;
     padding: 11px 15px 32px 15px;
-    width: 535px;
+    max-width: 535px;
     background: #FFF;
     border-radius: 26px;
 }
@@ -6928,13 +6938,16 @@ body.fixed {
 }
 
 .suc_rev_content {
-    width: 457px;
+    max-width: 457px;
     margin: 0 auto;
     padding: 58px 0 0 0;
 }
 
 .suc_rev_content img {
+    display: block;
+    width: auto;
     margin: 0 0 106px 5%;
+    max-width: 100%;
 }
 
 .suc_rev_content .transparent_pill {
