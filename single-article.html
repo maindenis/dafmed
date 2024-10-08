@@ -8,12 +8,11 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">	
 	<title></title>
-	<!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
 </head>
 <body>
 	<div class="wrapper">
 	<!-- Header -->		
-	<header>
+	<header id="header">
 		<div class="row">
 			<div class="header_site">
 				<div class="left">
@@ -43,6 +42,17 @@
 									<li><a href="#">Блог</a></li>
 									<li><a href="#">Контакты</a></li>
 								</ul>
+								<div class="resp_two_cols">
+									<div>
+										<a href="tel:8(985) 394-53-35" class="white_resp_pill">
+											<img src="img/tel_small.svg" alt="" loading="lazy" />
+											8(985) 394-53-35
+										</a>
+									</div>
+									<div>
+										<a href="tel:8(985) 394-53-35" class="blue_resp_pill"  data-popup-link = "callback">Записаться</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -50,15 +60,40 @@
 				<div class="right">
 					<div class="two_pills">
 						<div>
-							<a href="tel:89853945335" class="white_pill">8(985) 394-53-35</a>
+							<div class="novisible_1124">
+								<a href="tel:89853945335" class="white_pill">8(985) 394-53-35</a>
+							</div>
+							<div class="visible_1124">
+								<a href="tel:89853945335" class="white_pill_resp">
+									<img src="img/tel.svg" alt="" loading="lazy" />
+								</a>
+							</div>
 						</div>
 						<div>
-							<a href="#" class="blue_pill">Записаться</a>
+							<div class="novisible_900">
+								<a href="#" class="blue_pill" data-popup-link = "callback">Записаться</a>
+							</div>
+							<div class="visible_900">
+								<button type="button" class="respBtn">
+									<img src="img/burger.svg" alt="" loading="lazy" />
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>				
 			</div>
-		</div>						
+		</div>
+	<!-- Resp close btn -->
+	<button type="button" class="closeNav">
+		<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M10.874 10.875L19.1236 19.1246" stroke="#102348" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+		<path d="M10.874 19.125L19.1236 10.8754" stroke="#102348" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+		</svg>
+	</button>
+	<!-- /Resp close btn -->
+	<!-- Resp Bg -->
+	<div class="res_bg"></div>
+	<!-- /Resp Bg -->					
 	</header>
 	<!-- /Header -->
 	<!-- Content -->

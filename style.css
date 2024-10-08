@@ -3457,6 +3457,10 @@ span.circle_shape:before {
     padding: 125px 0 40px 0;
 }
 
+.photo_box_blog {
+    border: none !important;
+}
+
 .photo_box_6 {
     width: 248px;
     height: 296px;
@@ -3642,7 +3646,7 @@ span.circle_shape:before {
     top: 0;
     left: 0;
     background-image: url(img/blue_shape_2.svg);
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: 2;
@@ -4030,10 +4034,19 @@ span.circle_shape:before {
 }
 
 .box_404 {
+    display: flex;
+    flex-direction: column;
     min-height: calc(100vh - 84px);
     background: #FFF;
     border-radius: 32px;
+    padding-left: 25px;
+    padding-right: 25px;
     text-align: center;
+}
+
+.box_404_height {
+    flex: 1;
+    height: 100%;
 }
 
 .box_404 h1 {
@@ -4052,7 +4065,7 @@ span.circle_shape:before {
 .box_404 .transparent_pill {
     width: 100%;
     max-width: 457px;
-    margin: 0 auto;
+    margin: 0 auto 40px auto;
 }
 
 /*-- /Section 1 - 404 --*/
