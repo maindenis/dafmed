@@ -280,6 +280,19 @@ $(document).ready(function() {
         });
     }
 
+    if( $(".about_thumbs").length > 0 ) {
+        $(".about_thumbs").not(".slick-initialized").slick({
+            dots: false,
+            arrows: false,
+            // autoplay: true,
+            // autoplaySpeed: 4000,
+            speed: 2000,
+            slidesToShow: 1,
+            slidesToScroll: 2,
+            variableWidth: true,
+        });
+    }
+
     // -------------
 
     $(".rate").each(function() {
@@ -566,25 +579,39 @@ $(document).ready(function() {
       }
     });
 
-    // -----------------
+    // -----------------  
 
-    if($("#map").length > 0) {
-        var mapZoom = $("#map").attr("data-zoom");
-        var lat = $("#map").attr("data-lat");
-        var long = $("#map").attr("data-long");
-        ymaps.ready(function () {        
-            var myMap = new ymaps.Map('map', {
-                center: [long, lat],
-                zoom: mapZoom
-            }, {
-                searchControlProvider: 'yandex#search'
-            });
-            myPlacemark1 = new ymaps.Placemark([long, lat], {
-                hintContent: ''
-            }, {
-            });
-            myMap.geoObjects.add(myPlacemark1);        
-        });
-    }
+    // if($("#map").length > 0) {
+    //     var mapZoom = $("#map").attr("data-zoom");
+    //     var lat = $("#map").attr("data-lat");
+    //     var long = $("#map").attr("data-long");    
+    //     ymaps.ready(function () {        
+    //         var myMap = new ymaps.Map('map', {
+    //             center: [long, lat],
+    //             zoom: mapZoom
+    //         }, {
+    //             searchControlProvider: 'yandex#search'
+    //         });
+    //         var squareLayout;
+    //         var img;
+    //         if($("#map").hasClass("map_2")) {
+    //             squareLayout = ymaps.templateLayoutFactory.createClass("<div class='pin_box'><i class='pin'></i><div class='map_img'><img src='img/map_pin.jpg' /></div></div>");
+    //             img = "";
+    //         } else {
+    //             squareLayout = 'default#image';
+    //             img = "img/pin.svg";
+    //         }
+            
+    //         myPlacemark1 = new ymaps.Placemark([long, lat], {
+    //             hintContent: 'DAFMED'
+    //         }, {
+    //         iconLayout: squareLayout,
+    //         iconImageHref: img,
+    //         iconImageSize: [92, 105],
+    //         iconImageOffset: [-5, -38]
+    //         });
+    //         myMap.geoObjects.add(myPlacemark1);
+    //     });
+    // }
 
 });
